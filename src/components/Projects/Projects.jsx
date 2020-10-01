@@ -2,11 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import SwipeableViews from 'react-swipeable-views';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { AppBar } from '@material-ui/core';
-import { Tabs } from '@material-ui/core';
-import { Tab } from '@material-ui/core';
-import { Typography } from '@material-ui/core';
-import { Box } from '@material-ui/core';
+import { AppBar, Tabs, Tab, Typography, Box } from '@material-ui/core';
+import { faDonate, faTshirt, faGlobeAmericas, faWalking } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -55,6 +54,11 @@ export default function Projects() {
         setValue(index);
     }
 
+    const finesse = <FontAwesomeIcon icon={faDonate} size="3x" />
+    const swapify = <FontAwesomeIcon icon={faTshirt} size="3x" />
+    const slashTrash = <FontAwesomeIcon icon={faGlobeAmericas} size="3x" />
+    const hangman = <FontAwesomeIcon icon={faWalking} size="3x" />
+
     return (
         <>
             <h1>Projects</h1>
@@ -68,10 +72,10 @@ export default function Projects() {
                     textColor="primary"
                     variant="fullWidth"
                     aria-label="full width tabs">
-                    <Tab label="Finesse" {...allyProps(0)} />
-                    <Tab label="SwapiFy" {...allyProps(1)} />
-                    <Tab label="Slash Trash" {...allyProps(2)} />
-                    <Tab label="Hangman" {...allyProps(3)} />
+                    <Tab label="Finesse" icon={finesse} {...allyProps(0)} />
+                    <Tab label="SwapiFy" icon={swapify} {...allyProps(1)} />
+                    <Tab label="Slash Trash" icon={slashTrash} {...allyProps(2)} />
+                    <Tab label="Hangman" icon={hangman}{...allyProps(3)} />
                 </Tabs>
             </AppBar>
 
@@ -80,8 +84,8 @@ export default function Projects() {
                 index={value}
                 onChangeIndex={handleChangeIndex}
             >
-                <TabPanel value={value} index={0} dir={theme.direction}>About Finesse</TabPanel>
-                <TabPanel value={value} index={1} dir={theme.direction}>About Swapify</TabPanel>
+                <TabPanel value={value} index={0} dir={theme.direction}>About Finesse: Description, Technologies, Screenshot/Gif</TabPanel>
+                <TabPanel value={value} index={1} dir={theme.direction}>About Swapify <i class="fas fa-donate"></i></TabPanel>
                 <TabPanel value={value} index={2} dir={theme.direction}>About Slash Trash</TabPanel>
                 <TabPanel value={value} index={3} dir={theme.direction}>About Hangman</TabPanel>
             </SwipeableViews>
