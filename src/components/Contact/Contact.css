@@ -1,0 +1,9 @@
+.Contact-Icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.Contact:hover {
+    color: royalblue;
+}

@@ -1,0 +1,29 @@
+/* .Project-img {
+    grid-area: img;
+}
+
+.Project-info {
+    grid-area: info;
+}
+
+.root {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "img info";
+    align-content: space-around;
+} */
+
+/* .root {
+    display: grid;
+    grid-template-areas: "img info";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+} */
+
+.Projects {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: space-between;
+}

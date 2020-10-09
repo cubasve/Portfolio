@@ -1,0 +1,13 @@
+/* .Skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+} */
+
+@media only screen and (min-width : 900px) {
+    .Skills {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
