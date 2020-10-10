@@ -1,0 +1,33 @@
+#Intro-Icons {
+    display: flex;
+    /* flex-direction: row; */
+}
+
+.Intro:hover {
+    color: royalblue;
+}
+
+/* .City {
+    text-align: left;
+    display: flex;
+    justify-content: flex-start;
+    color: red;
+} */
+
+.city {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.Landing-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: space-between;
+}

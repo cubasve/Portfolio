@@ -28,6 +28,7 @@ export default function Contact() {
                     <Link className={classes.icon} href="https://www.linkedin.com/in/cubasve/" target="_blank" rel="noopener" color="inherit"><FontAwesomeIcon icon={faLinkedin} /></Link>
                 </Typography>
             </div>
+            <br />
         </>
     )
 }

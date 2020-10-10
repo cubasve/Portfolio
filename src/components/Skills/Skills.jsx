@@ -2,8 +2,6 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Card, CardContent, Typography } from '@material-ui/core';
 import './Skills.css';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faHtml5, faCss3Alt, faJsSquare, faReact, faNode, faPython, faGitAlt, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const useStyles = makeStyles({
     card: {
@@ -13,9 +11,9 @@ const useStyles = makeStyles({
     title: {
         paddingBottom: 20,
     },
-    icon: {
-        // padding: 20,
-    },
+    // icon: {
+
+    // },
 });
 
 const html = <i class="devicon-html5-plain colored"></i>;
@@ -45,23 +43,22 @@ export default function Skills() {
             <div className="Skills">
                 <Card className={classes.card}>
                     <CardContent>
-                        <Typography variant="h4" component="h2" className={classes.title}>FRONT-END</Typography>
-                        <Typography variant="h3" component="p" className={classes.icon}>{html} {css} {javascript} {react} {jQuery}</Typography>
-                        {/* <Typography variant="h6" component="h1">HTML CSS JS React jQuery</Typography> */}
+                        <Typography variant="h5" className={classes.title}>FRONT-END</Typography>
+                        <Typography variant="h3" className={classes.icon}>{html} {css} {javascript} {react} {jQuery}</Typography>
                     </CardContent>
                 </Card>
 
                 <Card className={classes.card}>
                     <CardContent>
-                        <Typography variant="h4" component="h2" className={classes.title}>BACK-END</Typography>
-                        <Typography variant="h3" component="p" className={classes.icon}>{express} {node} {python} {django} {mongoDB} {postgresql}</Typography>
+                        <Typography variant="h5" className={classes.title}>BACK-END</Typography>
+                        <Typography variant="h3" className={classes.icon}>{express} {node} {python} {django}{mongoDB}{postgresql}</Typography>
                     </CardContent>
                 </Card>
 
                 <Card className={classes.card}>
                     <CardContent>
-                        <Typography variant="h4" component="h2" className={classes.title}>TOOLS</Typography>
-                        <Typography variant="h3" component="p" className={classes.icon}>{git} {gitHub} {heroku} {trello} {vsCode}</Typography>
+                        <Typography variant="h5" className={classes.title}>TOOLS</Typography>
+                        <Typography variant="h3" className={classes.icon}>{git} {gitHub} {heroku} {trello} {vsCode}</Typography>
                     </CardContent>
                 </Card>
             </div>

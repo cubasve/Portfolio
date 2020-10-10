@@ -84,7 +84,7 @@ export default function Projects() {
     const finesse = <FontAwesomeIcon icon={faDonate} size="3x" />
     const swapify = <FontAwesomeIcon icon={faTshirt} size="3x" />
     const slashTrash = <FontAwesomeIcon icon={faGlobeAmericas} size="3x" />
-    const hangman = <FontAwesomeIcon icon={faStreetView} size="3x" />
+    // const hangman = <FontAwesomeIcon icon={faStreetView} size="3x" />
 
     return (
         <>
@@ -100,7 +100,7 @@ export default function Projects() {
                     <Tab label="Finesse" icon={finesse} {...allyProps(0)} />
                     <Tab label="SwapiFy" icon={swapify} {...allyProps(1)} />
                     <Tab label="Slash Trash" icon={slashTrash} {...allyProps(2)} />
-                    <Tab label="Hangman" icon={hangman}{...allyProps(3)} />
+                    {/* <Tab label="Hangman" icon={hangman}{...allyProps(3)} /> */}
                 </Tabs>
             </AppBar>
 
@@ -121,7 +121,7 @@ export default function Projects() {
                                     <Button className={classes.button} variant="contained" color="primary" href="https://drippininfinesse.herokuapp.com/" target="_blank" rel="noopener">Demo</Button>
                                     <Button className={classes.button} variant="contained" color="primary" href="https://github.com/cubasve/Finesse" target="_blank" rel="noopener">Code</Button>
                                 </h6>
-                                <span className="tech"><h2>Technologies: </h2> <h1>{mongoDB} {express} {react} {node}</h1></span>
+                                <span className="tech"><h2>Technologies:</h2> <h1>{mongoDB} {express} {react} {node}</h1></span>
                                 {/* <h2>Technologies: {mongoDB} {express} {react} {node}</h2> */}
                         Finesse tracks a user's personal financial statements and teaches financial literacy. It aims to demystify financial jargon so it is easy to understand. This application's concepts are based on Robert Kiyosaki's "Increase Your Financial IQ," with additional features implemented.
                             </div>
@@ -137,7 +137,7 @@ export default function Projects() {
                                     <Button className={classes.button} variant="contained" color="primary" href="https://teamswapify.herokuapp.com/" target="_blank" rel="noopener">Demo</Button>
                                     <Button className={classes.button} variant="contained" color="primary" href="https://github.com/cubasve/Swapify" target="_blank" rel="noopener">Code</Button>
                                 </h6>
-                                <span className="tech"><h2>Technologies:</h2><h1> {postgresql} {python} {django}</h1></span>
+                                <span className="tech"><h2>Technologies:</h2><h1>{postgresql} {python} {django}</h1></span>
                         Swapify is a collaborative project built by 5 developers. Shoes and clothing posted by the same user can be recommended to be styled together to form an outfit. Its purpose is to prevent fast fashion from being sent to landfills and instead promote the second-hand market.
                             </div>
                         </div>
@@ -152,12 +152,12 @@ export default function Projects() {
                                     <Button className={classes.button} variant="contained" color="primary" href="https://slash-trash.herokuapp.com/" target="_blank" rel="noopener">Demo</Button>
                                     <Button className={classes.button} variant="contained" color="primary" href="https://github.com/cubasve/Slash-Trash" target="_blank" rel="noopener">Code</Button>
                                 </h6>
-                                <span className="tech"><h2>Technologies: </h2> <h1>{mongoDB} {express} {node}</h1></span>
+                                <span className="tech"><h2>Technologies:</h2><h1>{mongoDB} {express} {node}</h1></span>
                         Slash Trash is a platform for users to search for eco-friendly alternatives to everyday household items and start their journey to a low-waste lifestyle. This application provides actionable steps to go green by allowing the user the ability to keep track of the changes they implemented.
                             </div>
                         </div>
                     </TabPanel>
-                    <TabPanel value={value} index={3} dir={theme.direction}>About Hangman</TabPanel>
+                    {/* <TabPanel value={value} index={3} dir={theme.direction}>About Hangman</TabPanel> */}
                 </SwipeableViews>
             </div>
         </>
