@@ -18,13 +18,13 @@ export default function Contact() {
         <>
             <h1>Contact</h1>
             <div className="Contact-Icons">
-                <Typography variant="h3" component="h2" className="Contact">
+                <Typography variant="h3" className="Contact">
                     <Link className={classes.icon} href="mailto:cubasve@gmail.com" color="inherit"><FontAwesomeIcon icon={faEnvelope} size="10px" /></Link>
                 </Typography>
-                <Typography variant="h3" component="h2" className="Contact">
+                <Typography variant="h3" className="Contact">
                     <Link className={classes.icon} href="https://github.com/cubasve" target="_blank" rel="noopener" color="inherit"><FontAwesomeIcon icon={faGithub} /></Link>
                 </Typography>
-                <Typography variant="h3" component="h2" className="Contact">
+                <Typography variant="h3" className="Contact">
                     <Link className={classes.icon} href="https://www.linkedin.com/in/cubasve/" target="_blank" rel="noopener" color="inherit"><FontAwesomeIcon icon={faLinkedin} /></Link>
                 </Typography>
             </div>

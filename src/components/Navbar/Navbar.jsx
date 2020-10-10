@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppBar, Toolbar, IconButton, Typography, Link } from '@material-ui/core';
+import { AppBar, Toolbar, Typography, Link } from '@material-ui/core';
 
 
 export default function Navbar() {
@@ -7,10 +7,8 @@ export default function Navbar() {
         <>
             <AppBar position="static">
                 <Toolbar>
-                    <IconButton edge="start" color="inherit" aria-label="menu">
-                    </IconButton>
+                    {/* <IconButton edge="start" color="inherit" aria-label="menu"> */}
                     <Typography variant="h6">Eva Cubas Vasquez</Typography>
-                    <Link href="#skills" color="inherit">Skills</Link>
                 </Toolbar>
             </AppBar>
         </>

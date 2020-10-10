@@ -1,33 +1,20 @@
-#Intro-Icons {
-    display: flex;
-    /* flex-direction: row; */
-}
-
-.Intro:hover {
-    color: royalblue;
-}
-
-/* .City {
-    text-align: left;
-    display: flex;
-    justify-content: flex-start;
-    color: red;
+/* .Introduction {
+    background-color: #282c34;
 } */
 
-.city {
+.IntroduceYourself {
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
+    /* justify-content: space-between;
+    align-content: space-between; */
 }
 
-.socials {
+.Eva {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
 }
 
-.Landing-page {
+.Brand-Statement {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-content: space-between;
 }
