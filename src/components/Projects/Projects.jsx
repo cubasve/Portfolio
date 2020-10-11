@@ -36,10 +36,6 @@ function allyProps(index) {
     }
 }
 
-// const useStyles = makeStyles(theme => ({
-//     root: { backgroundColor: theme.palette.background.paper, width: 500 }
-// }))
-
 const html = <i class="devicon-html5-plain colored"></i>;
 const css = <i class="devicon-css3-plain colored"></i>;
 // const bootstrap = <i class="devicon-bootstrap-plain colored"></i>;
@@ -58,12 +54,14 @@ const heroku = <i class="devicon-heroku-plain colored"></i>;
 
 const useStyles = makeStyles({
     button: {
-        marginLeft: 20,
+        marginLeft: 10,
+        marginRight: 10,
         marginTop: 0,
         marginBottom: 0,
     },
-    tech: {
-
+    description: {
+        marginLeft: 50,
+        marginRight: 50,
     }
 });
 
@@ -88,7 +86,7 @@ export default function Projects() {
 
     return (
         <>
-            <h1>Projects</h1>
+            <h1 id="projects">Projects</h1>
             <AppBar position="static" color="default">
                 <Tabs
                     value={value}
@@ -121,9 +119,9 @@ export default function Projects() {
                                     <Button className={classes.button} variant="contained" color="primary" href="https://drippininfinesse.herokuapp.com/" target="_blank" rel="noopener">Demo</Button>
                                     <Button className={classes.button} variant="contained" color="primary" href="https://github.com/cubasve/Finesse" target="_blank" rel="noopener">Code</Button>
                                 </h6>
-                                <span className="tech"><h2>Technologies:</h2> <h1>{mongoDB} {express} {react} {node}</h1></span>
+                                <span className="tech"><h2>Technologies:</h2> <h1>{mongoDB}{express} {react} {node}</h1></span>
                                 {/* <h2>Technologies: {mongoDB} {express} {react} {node}</h2> */}
-                        Finesse tracks a user's personal financial statements and teaches financial literacy. It aims to demystify financial jargon so it is easy to understand. This application's concepts are based on Robert Kiyosaki's "Increase Your Financial IQ," with additional features implemented.
+                                <p className={classes.description}>Finesse tracks a user's personal financial statements and teaches financial literacy. It aims to demystify financial jargon so it is easy to understand. This application's concepts are based on Robert Kiyosaki's "Increase Your Financial IQ," with additional features implemented.</p>
                             </div>
                         </div>
                     </TabPanel>
@@ -138,7 +136,7 @@ export default function Projects() {
                                     <Button className={classes.button} variant="contained" color="primary" href="https://github.com/cubasve/Swapify" target="_blank" rel="noopener">Code</Button>
                                 </h6>
                                 <span className="tech"><h2>Technologies:</h2><h1>{postgresql} {python} {django}</h1></span>
-                        Swapify is a collaborative project built by 5 developers. Shoes and clothing posted by the same user can be recommended to be styled together to form an outfit. Its purpose is to prevent fast fashion from being sent to landfills and instead promote the second-hand market.
+                                <p className={classes.description}>Swapify is a collaborative project built by 5 developers. Shoes and clothing posted by the same user can be recommended to be styled together to form an outfit. Its purpose is to prevent fast fashion from being sent to landfills and instead promote the second-hand market.</p>
                             </div>
                         </div>
                     </TabPanel>
@@ -152,8 +150,8 @@ export default function Projects() {
                                     <Button className={classes.button} variant="contained" color="primary" href="https://slash-trash.herokuapp.com/" target="_blank" rel="noopener">Demo</Button>
                                     <Button className={classes.button} variant="contained" color="primary" href="https://github.com/cubasve/Slash-Trash" target="_blank" rel="noopener">Code</Button>
                                 </h6>
-                                <span className="tech"><h2>Technologies:</h2><h1>{mongoDB} {express} {node}</h1></span>
-                        Slash Trash is a platform for users to search for eco-friendly alternatives to everyday household items and start their journey to a low-waste lifestyle. This application provides actionable steps to go green by allowing the user the ability to keep track of the changes they implemented.
+                                <span className="tech"><h2>Technologies:</h2><h1>{mongoDB}{express} {node}</h1></span>
+                                <p className={classes.description}>Slash Trash is a platform for users to search for eco-friendly alternatives to everyday household items and start their journey to a low-waste lifestyle. This application provides actionable steps to go green by allowing the user the ability to keep track of the changes they implemented.</p>
                             </div>
                         </div>
                     </TabPanel>

@@ -12,7 +12,7 @@ const useStyles = makeStyles({
         paddingBottom: 20,
     },
     // icon: {
-
+    //     margin: 50,
     // },
 });
 
@@ -39,7 +39,7 @@ export default function Skills() {
 
     return (
         <>
-            <h1>Skills</h1>
+            <h1 id="skills">Skills</h1>
             <div className="Skills">
                 <Card className={classes.card}>
                     <CardContent>

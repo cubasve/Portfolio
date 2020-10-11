@@ -4,6 +4,7 @@ import Intro from './components/Intro/Intro';
 import Projects from './components/Projects/Projects';
 import Skills from './components/Skills/Skills';
 import Contact from './components/Contact/Contact';
+import { Toolbar } from '@material-ui/core';
 // import logo from './logo.svg';
 import './App.css';
 

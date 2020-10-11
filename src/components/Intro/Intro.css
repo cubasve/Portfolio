@@ -4,17 +4,22 @@
 
 .IntroduceYourself {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     /* justify-content: space-between;
     align-content: space-between; */
 }
 
-.Eva {
-    display: flex;
-    flex-direction: row;
+.IntroduceYourself {
+    display: grid;
+    grid-template-areas: "name brand";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr ;
 }
 
+.Eva {
+    grid-area: name;
+} 
+
 .Brand-Statement {
-    display: flex;
-    flex-direction: row;
-}
+    grid-area: brand;
+} 
