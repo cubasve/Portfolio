@@ -17,14 +17,14 @@ img {
     justify-content: center;
 }
 
-@media only screen and (max-width : 1150px) {
+@media only screen and (max-width : 1200px) {
     .Projects {
         display: flex;
         flex-direction: column;
     }
 }
 
-@media only screen and (min-width : 700px) and (max-width : 1149px) {
+@media only screen and (min-width : 700px) and (max-width : 1199px) {
     .Projects {
         width: 650px;
     }
@@ -35,6 +35,10 @@ img {
         width: 500px;
         height: 400px;
     }
+
+    .Projects {
+        width: 500px;
+    }
 }
 
 @media only screen and (max-width : 500px) {
@@ -42,11 +46,19 @@ img {
         width: 400px;
         height: 300px;
     }
+
+    .Projects {
+        width: 400px;
+    }
 }
 
 @media only screen and (max-width : 300px) {
     img {
-        width: 300px;
-        height: 200px;
+        width: 280px;
+        height: 180px;
+    }
+
+    .Projects {
+        width: 280px;
     }
 }
