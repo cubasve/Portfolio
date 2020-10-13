@@ -8,7 +8,7 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles({
     link: {
         color: 'white',
-        margin: 20,
+        margin: 10,
         textAlign: 'center',
     },
     // logo: {

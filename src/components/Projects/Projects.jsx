@@ -142,7 +142,7 @@ export default function Projects() {
                     </TabPanel>
                     <TabPanel value={value} index={2} dir={theme.direction}>
                         <div className="Projects">
-                            <div><img src="./Swapify.png" alt="SlashTrash" /></div>
+                            <div><img src="./SlashTrash.png" alt="SlashTrash" /></div>
                             <div className="Project-info">
                                 <h1>SLASH TRASH</h1>
                                 <h2>Eco-Friendly Household Product Tracker</h2>
