@@ -9,13 +9,11 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <Navbar />
-        <Intro />
-        <Projects />
-        <Skills />
-        <Contact />
-      </header>
+      <Navbar />
+      <Intro />
+      <Projects />
+      <Skills />
+      <Contact />
     </div>
   );
 }
