@@ -23,3 +23,7 @@
 .Brand-Statement {
     grid-area: brand;
 } 
+
+.name {
+    color: #d4af37;
+}

@@ -4,8 +4,6 @@ import Intro from './components/Intro/Intro';
 import Projects from './components/Projects/Projects';
 import Skills from './components/Skills/Skills';
 import Contact from './components/Contact/Contact';
-import { Toolbar } from '@material-ui/core';
-// import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -17,15 +15,6 @@ function App() {
         <Projects />
         <Skills />
         <Contact />
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        {/* <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
       </header>
     </div>
   );

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import SwipeableViews from 'react-swipeable-views';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { AppBar, Tabs, Tab, Typography, Box, Button } from '@material-ui/core';
-import { faDonate, faTshirt, faGlobeAmericas, faStreetView } from '@fortawesome/free-solid-svg-icons';
+import { faDonate, faTshirt, faGlobeAmericas } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function TabPanel(props) {
@@ -62,6 +62,7 @@ const useStyles = makeStyles({
     description: {
         marginLeft: 50,
         marginRight: 50,
+        marginTop: 0,
     }
 });
 
@@ -116,11 +117,10 @@ export default function Projects() {
                                 <h1>FINESSE</h1>
                                 <h2>Financial Statement Tracker</h2>
                                 <h6>
-                                    <Button className={classes.button} variant="contained" color="primary" href="https://drippininfinesse.herokuapp.com/" target="_blank" rel="noopener">Demo</Button>
-                                    <Button className={classes.button} variant="contained" color="primary" href="https://github.com/cubasve/Finesse" target="_blank" rel="noopener">Code</Button>
+                                    <Button className={classes.button} variant="contained" color="primary" href="https://drippininfinesse.herokuapp.com/" target="_blank" rel="noopener noreferrer">Demo</Button>
+                                    <Button className={classes.button} variant="contained" color="primary" href="https://github.com/cubasve/Finesse" target="_blank" rel="noopener noreferrer">Code</Button>
                                 </h6>
                                 <span className="tech"><h2>Technologies:</h2> <h1>{mongoDB}{express} {react} {node}</h1></span>
-                                {/* <h2>Technologies: {mongoDB} {express} {react} {node}</h2> */}
                                 <p className={classes.description}>Finesse tracks a user's personal financial statements and teaches financial literacy. It aims to demystify financial jargon so it is easy to understand. This application's concepts are based on Robert Kiyosaki's "Increase Your Financial IQ," with additional features implemented.</p>
                             </div>
                         </div>
@@ -132,8 +132,8 @@ export default function Projects() {
                                 <h1>SWAPIFY</h1>
                                 <h2>Second-Hand Clothing and Shoe Exchange</h2>
                                 <h6>
-                                    <Button className={classes.button} variant="contained" color="primary" href="https://teamswapify.herokuapp.com/" target="_blank" rel="noopener">Demo</Button>
-                                    <Button className={classes.button} variant="contained" color="primary" href="https://github.com/cubasve/Swapify" target="_blank" rel="noopener">Code</Button>
+                                    <Button className={classes.button} variant="contained" color="primary" href="https://teamswapify.herokuapp.com/" target="_blank" rel="noopener noreferrer">Demo</Button>
+                                    <Button className={classes.button} variant="contained" color="primary" href="https://github.com/cubasve/Swapify" target="_blank" rel="noopener noreferrer">Code</Button>
                                 </h6>
                                 <span className="tech"><h2>Technologies:</h2><h1>{postgresql} {python} {django}</h1></span>
                                 <p className={classes.description}>Swapify is a collaborative project built by 5 developers. Shoes and clothing posted by the same user can be recommended to be styled together to form an outfit. Its purpose is to prevent fast fashion from being sent to landfills and instead promote the second-hand market.</p>
@@ -147,11 +147,11 @@ export default function Projects() {
                                 <h1>SLASH TRASH</h1>
                                 <h2>Eco-Friendly Household Product Tracker</h2>
                                 <h6>
-                                    <Button className={classes.button} variant="contained" color="primary" href="https://slash-trash.herokuapp.com/" target="_blank" rel="noopener">Demo</Button>
-                                    <Button className={classes.button} variant="contained" color="primary" href="https://github.com/cubasve/Slash-Trash" target="_blank" rel="noopener">Code</Button>
+                                    <Button className={classes.button} variant="contained" color="primary" href="https://slash-trash.herokuapp.com/" target="_blank" rel="noopener noreferrer">Demo</Button>
+                                    <Button className={classes.button} variant="contained" color="primary" href="https://github.com/cubasve/Slash-Trash" target="_blank" rel="noopener noreferrer">Code</Button>
                                 </h6>
                                 <span className="tech"><h2>Technologies:</h2><h1>{mongoDB}{express} {node}</h1></span>
-                                <p className={classes.description}>Slash Trash is a platform for users to search for eco-friendly alternatives to everyday household items and start their journey to a low-waste lifestyle. This application provides actionable steps to go green by allowing the user the ability to keep track of the changes they implemented.</p>
+                                <p className={classes.description}>Slash Trash is a platform for users to search for eco-friendly alternatives to everyday household items and start their journey to a low-waste lifestyle.</p>
                             </div>
                         </div>
                     </TabPanel>

@@ -37,7 +37,7 @@ export default function Intro() {
                 <div className="Eva">
                     <h4><FontAwesomeIcon icon={faMapMarkerAlt} />  Toronto, Ontario</h4>
                     <br />
-                    <h2><FontAwesomeIcon icon={faTerminal} /> <ReactTypingEffect text={['Eva Cubas Vasquez']} typingDelay={1000} speed={100} eraseSpeed={200} eraseDelay={1000000} /></h2>
+                    <h2><FontAwesomeIcon icon={faTerminal} /> <ReactTypingEffect text={['Eva Cubas Vasquez']} typingDelay={1000} speed={100} eraseSpeed={200} eraseDelay={1000000} className="name" /></h2>
                     <h3>Full-Stack Web Developer</h3>
                 </div>
                 <div className={classes.brand}>

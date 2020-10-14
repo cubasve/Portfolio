@@ -17,20 +17,20 @@ img {
     justify-content: center;
 }
 
-@media only screen and (max-width : 1200px) {
+@media (max-width : 1200px) {
     .Projects {
         display: flex;
         flex-direction: column;
     }
 }
 
-@media only screen and (min-width : 700px) and (max-width : 1199px) {
+@media (min-width : 700px) and (max-width : 1199px) {
     .Projects {
         width: 650px;
     }
 }
 
-@media only screen and (max-width : 700px) {
+@media (max-width : 700px) {
     img {
         width: 500px;
         height: 400px;
@@ -41,7 +41,7 @@ img {
     }
 }
 
-@media only screen and (max-width : 500px) {
+@media (max-width : 500px) {
     img {
         width: 400px;
         height: 300px;
@@ -52,7 +52,7 @@ img {
     }
 }
 
-@media only screen and (max-width : 300px) {
+@media (max-width : 300px) {
     img {
         width: 280px;
         height: 180px;
@@ -60,5 +60,16 @@ img {
 
     .Projects {
         width: 280px;
+    }
+}
+
+@media (max-width : 200px) {
+    img {
+        width: 180px;
+        height: 80px;
+    }
+
+    .Projects {
+        width: 180px;
     }
 }
