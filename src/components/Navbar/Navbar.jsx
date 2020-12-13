@@ -26,7 +26,7 @@ export default function Navbar() {
                         <Link href="#intro" className={classes.link} id="nav-links"><FontAwesomeIcon icon={faLaptopCode} /> cubasve</Link>
                         <Link href="#projects" className={classes.link}>Projects</Link>
                         <Link href="#skills" className={classes.link}>Skills</Link>
-                        <Link href="#contact" className={classes.link}>Contact</Link>
+                        {/* <Link href="#contact" className={classes.link}>Contact</Link> */}
                     </Scrollspy>
                 </Toolbar>
             </AppBar>

@@ -13,62 +13,71 @@ img {
 
 .tech {
     display: flex;
-    flex-direction: row;
     justify-content: center;
 }
 
-@media (max-width : 1200px) {
+@media only screen and (max-width : 1251px) {
     .Projects {
         display: flex;
         flex-direction: column;
     }
 }
 
-@media (min-width : 700px) and (max-width : 1199px) {
+@media only screen and (min-width : 701px) and (max-width : 1250px) {
     .Projects {
         width: 650px;
+        /* background-color: yellow; */
     }
 }
 
-@media (max-width : 700px) {
+@media only screen and (max-width : 700px) {
     img {
         width: 500px;
         height: 400px;
     }
-
     .Projects {
         width: 500px;
+        /* background-color: tomato; */
     }
 }
 
-@media (max-width : 500px) {
+@media only screen and (max-width : 500px) {
     img {
         width: 400px;
         height: 300px;
     }
-
     .Projects {
         width: 400px;
+        /* background-color: teal; */
     }
 }
 
-@media (max-width : 300px) {
+@media only screen and (max-width : 300px) {
     img {
         width: 280px;
         height: 180px;
     }
-
     .Projects {
         width: 280px;
+        /* background-color: turquoise; */
     }
 }
 
-@media (max-width : 200px) {
+@media only screen and (max-width : 250px) {
+    img {
+        width: 230px;
+        height: 160px;
+    }
+    .Projects {
+        width: 230px;
+    }
+}
+
+@media only screen and (max-width : 200px) {
     img {
         width: 180px;
         height: 80px;
     }
-
     .Projects {
         width: 180px;
     }

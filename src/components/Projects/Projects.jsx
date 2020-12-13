@@ -38,7 +38,7 @@ function allyProps(index) {
 
 const html = <i class="devicon-html5-plain colored"></i>;
 const css = <i class="devicon-css3-plain colored"></i>;
-// const bootstrap = <i class="devicon-bootstrap-plain colored"></i>;
+const bootstrap = <i class="devicon-bootstrap-plain colored"></i>;
 const javascript = <i class="devicon-javascript-plain colored"></i>;
 const react = <i class="devicon-react-original colored"></i>
 const jQuery = <i class="devicon-jquery-plain colored"></i>;
@@ -56,8 +56,6 @@ const useStyles = makeStyles({
     button: {
         marginLeft: 10,
         marginRight: 10,
-        marginTop: 0,
-        marginBottom: 0,
     },
     description: {
         marginLeft: 50,
@@ -97,8 +95,8 @@ export default function Projects() {
                     variant="fullWidth"
                     aria-label="full width tabs">
                     <Tab label="Finesse" icon={finesse} {...allyProps(0)} />
-                    <Tab label="SwapiFy" icon={swapify} {...allyProps(1)} />
-                    <Tab label="Slash Trash" icon={slashTrash} {...allyProps(2)} />
+                    <Tab label="Slash Trash" icon={slashTrash} {...allyProps(1)} />
+                    <Tab label="SwapiFy" icon={swapify} {...allyProps(2)} />
                     {/* <Tab label="Hangman" icon={hangman}{...allyProps(3)} /> */}
                 </Tabs>
             </AppBar>
@@ -114,44 +112,44 @@ export default function Projects() {
                         <div className="Projects">
                             <div><img src="./Finesse.png" alt="Finesse" /></div>
                             <div className="Project-info">
-                                <h1>FINESSE</h1>
-                                <h2>Financial Statement Tracker</h2>
+                                <h2>FINESSE</h2>
+                                <h3>Financial Statement Tracker</h3>
                                 <h6>
                                     <Button className={classes.button} variant="contained" color="primary" href="https://drippininfinesse.herokuapp.com/" target="_blank" rel="noopener noreferrer">Demo</Button>
                                     <Button className={classes.button} variant="contained" color="primary" href="https://github.com/cubasve/Finesse" target="_blank" rel="noopener noreferrer">Code</Button>
                                 </h6>
-                                <span className="tech"><h2>Technologies:</h2> <h1>{mongoDB}{express} {react} {node}</h1></span>
+                                <span className="tech"><h3>Technologies:</h3> <h2>{mongoDB}{express} {react} {node} {bootstrap} </h2></span>
                                 <p className={classes.description}>Finesse tracks a user's personal financial statements and teaches financial literacy. It aims to demystify financial jargon so it is easy to understand. This application's concepts are based on Robert Kiyosaki's "Increase Your Financial IQ," with additional features implemented.</p>
                             </div>
                         </div>
                     </TabPanel>
                     <TabPanel value={value} index={1} dir={theme.direction}>
                         <div className="Projects">
-                            <div><img src="./Swapify.png" alt="Swapify" /></div>
+                            <div><img src="./SlashTrash.png" alt="SlashTrash" /></div>
                             <div className="Project-info">
-                                <h1>SWAPIFY</h1>
-                                <h2>Second-Hand Clothing and Shoe Exchange</h2>
+                                <h2>SLASH TRASH</h2>
+                                <h3>Eco-Friendly Household Product Finder and Tracker</h3>
                                 <h6>
-                                    <Button className={classes.button} variant="contained" color="primary" href="https://teamswapify.herokuapp.com/" target="_blank" rel="noopener noreferrer">Demo</Button>
-                                    <Button className={classes.button} variant="contained" color="primary" href="https://github.com/cubasve/Swapify" target="_blank" rel="noopener noreferrer">Code</Button>
+                                    <Button className={classes.button} variant="contained" color="primary" href="https://slash-trash.herokuapp.com/" target="_blank" rel="noopener noreferrer">Demo</Button>
+                                    <Button className={classes.button} variant="contained" color="primary" href="https://github.com/cubasve/Slash-Trash" target="_blank" rel="noopener noreferrer">Code</Button>
                                 </h6>
-                                <span className="tech"><h2>Technologies:</h2><h1>{postgresql} {python} {django}</h1></span>
-                                <p className={classes.description}>Swapify is a collaborative project built by 5 developers. Shoes and clothing posted by the same user can be recommended to be styled together to form an outfit. Its purpose is to prevent fast fashion from being sent to landfills and instead promote the second-hand market.</p>
+                                <span className="tech"><h3>Technologies:</h3><h2>{mongoDB}{express} {node}</h2></span>
+                                <p className={classes.description}>Slash Trash is a platform for users to search for eco-friendly alternatives to everyday household items and start their journey to a low-waste lifestyle.</p>
                             </div>
                         </div>
                     </TabPanel>
                     <TabPanel value={value} index={2} dir={theme.direction}>
                         <div className="Projects">
-                            <div><img src="./SlashTrash.png" alt="SlashTrash" /></div>
+                            <div><img src="./Swapify.png" alt="Swapify" /></div>
                             <div className="Project-info">
-                                <h1>SLASH TRASH</h1>
-                                <h2>Eco-Friendly Household Product Tracker</h2>
+                                <h2>SWAPIFY</h2>
+                                <h3>Second-Hand Clothing and Shoe Exchange</h3>
                                 <h6>
-                                    <Button className={classes.button} variant="contained" color="primary" href="https://slash-trash.herokuapp.com/" target="_blank" rel="noopener noreferrer">Demo</Button>
-                                    <Button className={classes.button} variant="contained" color="primary" href="https://github.com/cubasve/Slash-Trash" target="_blank" rel="noopener noreferrer">Code</Button>
+                                    <Button className={classes.button} variant="contained" color="primary" href="https://teamswapify.herokuapp.com/" target="_blank" rel="noopener noreferrer">Demo</Button>
+                                    <Button className={classes.button} variant="contained" color="primary" href="https://github.com/cubasve/Swapify" target="_blank" rel="noopener noreferrer">Code</Button>
                                 </h6>
-                                <span className="tech"><h2>Technologies:</h2><h1>{mongoDB}{express} {node}</h1></span>
-                                <p className={classes.description}>Slash Trash is a platform for users to search for eco-friendly alternatives to everyday household items and start their journey to a low-waste lifestyle.</p>
+                                <span className="tech"><h3>Technologies:</h3><h2>{postgresql} {python} {django}</h2></span>
+                                <p className={classes.description}>Swapify is a collaborative project built by 5 developers. Shoes and clothing posted by the same user can be recommended to be styled together to form an outfit. Its purpose is to prevent fast fashion from being sent to landfills and instead promote the second-hand market.</p>
                             </div>
                         </div>
                     </TabPanel>
