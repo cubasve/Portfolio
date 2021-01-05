@@ -14,14 +14,18 @@ const useStyles = makeStyles({
     // logo: {
     //     margin: 20,
     // }
+    // navbar: {
+    //     display: 'block',
+    // }
 });
 
 export default function Navbar() {
     const classes = useStyles();
     return (
         <>
-            <AppBar position="static">
-                <Toolbar className="Navbar">
+            <AppBar position="fixed">
+                {/* <Toolbar className="Navbar"> */}
+                <Toolbar className={classes.navbar}>
                     <Scrollspy items={['intro', 'projects', 'skills', 'contact']} currentClassName="is-current" offset={0}>
                         <Link href="#intro" className={classes.link} id="nav-links"><FontAwesomeIcon icon={faLaptopCode} /> cubasve</Link>
                         <Link href="#projects" className={classes.link}>Projects</Link>
