@@ -149,7 +149,7 @@ export default function Projects() {
                                     <Button className={classes.button} variant="contained" color="primary" href="https://github.com/cubasve/Swapify" target="_blank" rel="noopener noreferrer">Code</Button>
                                 </h6>
                                 <span className="tech"><h3>Technologies:</h3><h2>{postgresql} {python} {django}</h2></span>
-                                <p className={classes.description}>Swapify is a collaborative project built by 5 developers. Shoes and clothing posted by the same user can be recommended to be styled together to form an outfit. Its purpose is to prevent fast fashion from being sent to landfills and instead promote the second-hand market.</p>
+                                <p className={classes.description}>Swapify is a collaborative project built by five developers. Shoes and clothing posted by the same user can be recommended to be styled together to form an outfit. Its purpose is to prevent fast fashion from being sent to landfills and instead promote the second-hand market.</p>
                             </div>
                         </div>
                     </TabPanel>

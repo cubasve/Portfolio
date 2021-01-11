@@ -4,6 +4,7 @@
     justify-content: space-between;
     align-content: space-between;
     background-color: #282c34;
+    height: 500px;
 }
 
 img {
@@ -20,50 +21,57 @@ img {
     .Projects {
         display: flex;
         flex-direction: column;
+        height: 100%;
     }
 }
 
-@media only screen and (min-width : 701px) and (max-width : 1250px) {
+@media only screen and (min-width : 801px) and (max-width : 1250px) {
     .Projects {
         width: 650px;
-        /* background-color: yellow; */
     }
 }
 
-@media only screen and (max-width : 700px) {
+@media only screen and (min-width: 651px) and (max-width: 800px) {
     img {
         width: 500px;
         height: 400px;
     }
     .Projects {
         width: 500px;
-        /* background-color: tomato; */
     }
 }
 
-@media only screen and (max-width : 500px) {
+@media only screen and (min-width: 501px) and (max-width : 650px) {
     img {
-        width: 400px;
-        height: 300px;
+        width: 380px;
+        height: 280px;
     }
     .Projects {
-        width: 400px;
-        /* background-color: teal; */
+        width: 380px;
     }
 }
 
-@media only screen and (max-width : 300px) {
+@media only screen and (min-width: 400px) and (max-width : 500px) {
+    img {
+        width: 330px;
+        height: 230px;
+    }
+    .Projects {
+        width: 330px;
+    }
+}
+
+@media only screen and (min-width: 300px) and (max-width : 401px) {
     img {
         width: 280px;
         height: 180px;
     }
     .Projects {
         width: 280px;
-        /* background-color: turquoise; */
     }
 }
 
-@media only screen and (max-width : 250px) {
+@media only screen and (max-width : 299px) {
     img {
         width: 230px;
         height: 160px;
@@ -73,7 +81,7 @@ img {
     }
 }
 
-@media only screen and (max-width : 200px) {
+/* @media only screen and (max-width : 200px) {
     img {
         width: 180px;
         height: 80px;
@@ -81,4 +89,4 @@ img {
     .Projects {
         width: 180px;
     }
-}
+} */

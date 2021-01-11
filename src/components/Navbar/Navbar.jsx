@@ -23,7 +23,7 @@ export default function Navbar() {
     const classes = useStyles();
     return (
         <>
-            <AppBar position="fixed">
+            <AppBar position="static">
                 {/* <Toolbar className="Navbar"> */}
                 <Toolbar className={classes.navbar}>
                     <Scrollspy items={['intro', 'projects', 'skills', 'contact']} currentClassName="is-current" offset={0}>
