@@ -1,7 +1,7 @@
 import React from 'react';
 import './Projects.css';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { Card, CardHeader, CardMedia, CardContent, CardActions, Typography, IconButton, Button, Avatar } from '@material-ui/core';
+import { Card, CardHeader, CardMedia, CardContent, CardActions, Typography, IconButton, Button, Avatar, Icon } from '@material-ui/core';
 // import { MoreVertIcon } from '@material-ui/icons';
 import { faDonate, faTshirt, faGlobeAmericas } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -22,7 +22,26 @@ const git = <i class="devicon-git-plain colored"></i>;
 const gitHub = <i class="devicon-github-plain colored"></i>;
 const heroku = <i class="devicon-heroku-plain colored"></i>;
 
+const useStyles = makeStyles({
+    avatar: {
+        color: "blue",
+        backgroundColor: "white",
+    },
+    media: {
+        height: 0,
+        paddingTop: '56.25%', // 16:9
+    },
+
+    // description: {
+    //     marginLeft: 50,
+    //     marginRight: 50,
+    //     marginTop: 0,
+    // }
+});
+
 export default function Proj() {
+    const classes = useStyles();
+
     const finesse = <FontAwesomeIcon icon={faDonate} size="3x" />
     const swapify = <FontAwesomeIcon icon={faTshirt} size="3x" />
     const slashTrash = <FontAwesomeIcon icon={faGlobeAmericas} size="3x" />
@@ -31,25 +50,29 @@ export default function Proj() {
         <Card>
             <CardHeader
                 avatar={
-                    <Avatar aria-label="Finesse" color="blue">
-                        {slashTrash}
-                    </Avatar>
+                    // <Avatar aria-label="Finesse" variant="rounded" className={classes.avatar}>
+                    //     {finesse}
+                    <Icon className="fas fa-donate" color="primary" />
+                    // </Avatar>
                 }
                 // action={
                 //     <IconButton aria-label="more-info">
                 //         <MoreVertIcon />
                 //     </IconButton>
                 // }
-                title="Finesse"
+                title="FINESSE"
                 subheader="Financial Statement Tracker"
             />
             <CardMedia
+                className={classes.media}
                 image="./Finesse.png"
                 title="Finesse"
             />
             <CardContent>
                 <Typography>
-
+                    <Button className={classes.button} variant="contained" color="primary" href="https://drippininfinesse.herokuapp.com/" target="_blank" rel="noopener noreferrer">Demo</Button>
+                    <Button className={classes.button} variant="contained" color="primary" href="https://github.com/cubasve/Finesse" target="_blank" rel="noopener noreferrer">Code</Button>
+                    <h2>{mongoDB}{express} {react} {node} {bootstrap} </h2>
                 </Typography>
             </CardContent>
         </Card>

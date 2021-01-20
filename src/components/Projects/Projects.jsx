@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import SwipeableViews from 'react-swipeable-views';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { AppBar, Tabs, Tab, Typography, Box, Button } from '@material-ui/core';
-import { faDonate, faTshirt, faGlobeAmericas } from '@fortawesome/free-solid-svg-icons';
+import { faDonate, faTshirt, faGlobeAmericas, faCheckCircle, faUndoAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function TabPanel(props) {
@@ -81,6 +81,8 @@ export default function Projects() {
     const finesse = <FontAwesomeIcon icon={faDonate} size="3x" />
     const swapify = <FontAwesomeIcon icon={faTshirt} size="3x" />
     const slashTrash = <FontAwesomeIcon icon={faGlobeAmericas} size="3x" />
+    const bits = <FontAwesomeIcon icon={faUndoAlt} size="3x" />
+    const guaranteed = <FontAwesomeIcon icon={faCheckCircle} size="3x" />
     // const hangman = <FontAwesomeIcon icon={faStreetView} size="3x" />
 
 
@@ -99,6 +101,8 @@ export default function Projects() {
                     <Tab label="Finesse" icon={finesse} {...allyProps(0)} />
                     <Tab label="Slash Trash" icon={slashTrash} {...allyProps(1)} />
                     <Tab label="SwapiFy" icon={swapify} {...allyProps(2)} />
+                    {/* <Tab label="Bits" icon={bits} {...allyProps(3)} />
+                    <Tab label="Guaranteed" icon={guaranteed} {...allyProps(4)} /> */}
                     {/* <Tab label="Hangman" icon={hangman}{...allyProps(3)} /> */}
                 </Tabs>
             </AppBar>
@@ -155,7 +159,8 @@ export default function Projects() {
                             </div>
                         </div>
                     </TabPanel>
-                    {/* <TabPanel value={value} index={3} dir={theme.direction}>About Hangman</TabPanel> */}
+                    {/* <TabPanel value={value} index={3} dir={theme.direction}>About Bits</TabPanel>
+                    <TabPanel value={value} index={4} dir={theme.direction}>About Guaranteed for Life</TabPanel> */}
                 </SwipeableViews>
             </div>
         </>

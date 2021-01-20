@@ -71,7 +71,7 @@ img {
     }
 }
 
-@media only screen and (max-width : 299px) {
+@media only screen and (min-width: 201px) and (max-width : 299px) {
     img {
         width: 230px;
         height: 160px;
@@ -81,7 +81,7 @@ img {
     }
 }
 
-/* @media only screen and (max-width : 200px) {
+@media only screen and (max-width : 200px) {
     img {
         width: 180px;
         height: 80px;
@@ -89,4 +89,4 @@ img {
     .Projects {
         width: 180px;
     }
-} */
+}
