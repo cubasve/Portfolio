@@ -83,6 +83,8 @@ export default function Projects() {
     const slashTrash = <FontAwesomeIcon icon={faGlobeAmericas} size="3x" />
     // const hangman = <FontAwesomeIcon icon={faStreetView} size="3x" />
 
+
+
     return (
         <>
             <h1 id="projects">Projects</h1>
