@@ -1,9 +1,36 @@
+/* PROJ.JSX */
 .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    /* gap: 30px 30px,*/
+}
+
+@media only screen and (min-width: 945px) and (max-width: 1250px) {
+    .card {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
-    gap: 10px 50px,
+    }
 }
+
+@media only screen and (min-width: 635px) and (max-width: 944px) {
+    .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 634px) {
+    .card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    }
+}
+
+/* PROJ.JSX */
 
 .Projects {
     display: flex;
