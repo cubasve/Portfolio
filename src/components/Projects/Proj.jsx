@@ -3,6 +3,10 @@ import './Projects.css';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { Card, CardHeader, CardMedia, CardContent, CardActions, Typography, IconButton, Button, Avatar, Icon } from '@material-ui/core';
 // import { MoreVertIcon } from '@material-ui/icons';
+import MoreVertIcon from '@material-ui/icons/MoreVert';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LanguageIcon from '@material-ui/icons/Language';
+import YouTubeIcon from '@material-ui/icons/YouTube';
 import { faDonate, faTshirt, faGlobeAmericas } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -23,15 +27,26 @@ const gitHub = <i class="devicon-github-plain colored"></i>;
 const heroku = <i class="devicon-heroku-plain colored"></i>;
 
 const useStyles = makeStyles({
+    card: {
+        width: '280px',
+    },
     avatar: {
         color: "blue",
-        backgroundColor: "white",
+        marginBottom: 0,
     },
     media: {
+        // width: 250,
         height: 0,
         paddingTop: '56.25%', // 16:9
     },
-
+    subheader: {
+        paddingTop: 0,
+        paddingBottom: 0,
+        paddingRight: 5,
+        paddingLeft: 5,
+        marginTop: 0,
+        marginBottom: 0,
+    },
     // description: {
     //     marginLeft: 50,
     //     marginRight: 50,
@@ -42,39 +57,41 @@ const useStyles = makeStyles({
 export default function Proj() {
     const classes = useStyles();
 
-    const finesse = <FontAwesomeIcon icon={faDonate} size="3x" />
-    const swapify = <FontAwesomeIcon icon={faTshirt} size="3x" />
-    const slashTrash = <FontAwesomeIcon icon={faGlobeAmericas} size="3x" />
+    const finesse = <FontAwesomeIcon icon={faDonate} size="2x" />
+    const swapify = <FontAwesomeIcon icon={faTshirt} size="2x" />
+    const slashTrash = <FontAwesomeIcon icon={faGlobeAmericas} size="2x" />
 
     return (
-        <Card>
+        <Card className={classes.card}>
             <CardHeader
                 avatar={
-                    // <Avatar aria-label="Finesse" variant="rounded" className={classes.avatar}>
-                    //     {finesse}
-                    <Icon className="fas fa-donate" color="primary" />
-                    // </Avatar>
+                    <Icon color="primary">{finesse}</Icon>
                 }
-                // action={
-                //     <IconButton aria-label="more-info">
-                //         <MoreVertIcon />
-                //     </IconButton>
-                // }
-                title="FINESSE"
-                subheader="Financial Statement Tracker"
+                action={
+                    <IconButton aria-label="more-info">
+                        <MoreVertIcon />
+                    </IconButton>
+                }
+                title={
+                    <h2>GUARANTEED</h2>
+                }
             />
+            <CardContent>
+                <Typography className={classes.subheader}>
+                    <h4>Eco-Friendly Household Product Finder and Tracker</h4>
+                    <Icon>{mongoDB}{express} {react} {node} {bootstrap}</Icon>
+                </Typography>
+            </CardContent>
             <CardMedia
                 className={classes.media}
                 image="./Finesse.png"
                 title="Finesse"
             />
-            <CardContent>
-                <Typography>
-                    <Button className={classes.button} variant="contained" color="primary" href="https://drippininfinesse.herokuapp.com/" target="_blank" rel="noopener noreferrer">Demo</Button>
-                    <Button className={classes.button} variant="contained" color="primary" href="https://github.com/cubasve/Finesse" target="_blank" rel="noopener noreferrer">Code</Button>
-                    <h2>{mongoDB}{express} {react} {node} {bootstrap} </h2>
-                </Typography>
-            </CardContent>
+            <IconButton
+                className={classes.button} variant="contained" color="primary" href="https://drippininfinesse.herokuapp.com/" target="_blank" rel="noopener noreferrer"><LanguageIcon color="primary" />
+            </IconButton>
+            <IconButton className={classes.button} variant="contained" color="primary" href="https://github.com/cubasve/Finesse" target="_blank" rel="noopener noreferrer"><GitHubIcon color="primary" />
+            </IconButton>
         </Card>
     )
 }
