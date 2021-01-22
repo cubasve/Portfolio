@@ -28,11 +28,12 @@ const heroku = <i class="devicon-heroku-plain colored"></i>;
 
 const useStyles = makeStyles({
     card: {
-        width: '280px',
+        width: '300px',
     },
     avatar: {
-        color: "blue",
-        marginBottom: 0,
+        height: 0,
+        // color: "blue",
+        // marginBottom: 0,
     },
     media: {
         // width: 250,
@@ -40,6 +41,8 @@ const useStyles = makeStyles({
         paddingTop: '56.25%', // 16:9
     },
     subheader: {
+        heightTop: 0,
+        heightBottom: 0,
         paddingTop: 0,
         paddingBottom: 0,
         paddingRight: 5,
@@ -62,6 +65,8 @@ export default function Proj() {
     const slashTrash = <FontAwesomeIcon icon={faGlobeAmericas} size="2x" />
 
     return (
+        <div className="card">
+        {/* FINESSE */}
         <Card className={classes.card}>
             <CardHeader
                 avatar={
@@ -73,12 +78,12 @@ export default function Proj() {
                     </IconButton>
                 }
                 title={
-                    <h2>GUARANTEED</h2>
+                    <h2>FINESSE</h2>
                 }
             />
             <CardContent>
                 <Typography className={classes.subheader}>
-                    <h4>Eco-Friendly Household Product Finder and Tracker</h4>
+                    <h4>Financial Statement Tracker</h4>
                     <Icon>{mongoDB}{express} {react} {node} {bootstrap}</Icon>
                 </Typography>
             </CardContent>
@@ -88,10 +93,69 @@ export default function Proj() {
                 title="Finesse"
             />
             <IconButton
-                className={classes.button} variant="contained" color="primary" href="https://drippininfinesse.herokuapp.com/" target="_blank" rel="noopener noreferrer"><LanguageIcon color="primary" />
-            </IconButton>
-            <IconButton className={classes.button} variant="contained" color="primary" href="https://github.com/cubasve/Finesse" target="_blank" rel="noopener noreferrer"><GitHubIcon color="primary" />
-            </IconButton>
+                className={classes.button} variant="contained" color="primary" href="https://drippininfinesse.herokuapp.com/" target="_blank" rel="noopener noreferrer"><LanguageIcon color="primary" /></IconButton>
+            <IconButton className={classes.button} variant="contained" color="primary" href="https://github.com/cubasve/Finesse" target="_blank" rel="noopener noreferrer"><GitHubIcon color="primary" /></IconButton>
         </Card>
+
+        {/* SLASH TRASH */}
+        <Card className={classes.card}>
+            <CardHeader
+                avatar={
+                    <Icon color="primary">{slashTrash}</Icon>
+                }
+                action={
+                    <IconButton aria-label="more-info">
+                        <MoreVertIcon />
+                    </IconButton>
+                }
+                title={
+                    <h2>SLASH TRASH</h2>
+                }
+            />
+            <CardContent>
+                <Typography className={classes.subheader}>
+                    <h4>Eco-Friendly Household Product Finder and Tracker</h4>
+                    <Icon>{mongoDB}{express} {node}</Icon>
+                </Typography>
+            </CardContent>
+            <CardMedia
+                className={classes.media}
+                image="./SlashTrash.png"
+                title="SlashTrash"
+            />
+            <IconButton className={classes.button} variant="contained" color="primary" href="https://slash-trash.herokuapp.com/" target="_blank" rel="noopener noreferrer"><LanguageIcon color="primary" /></IconButton>
+            <IconButton className={classes.button} variant="contained" color="primary" href="https://github.com/cubasve/Slash-Trash" target="_blank" rel="noopener noreferrer"><GitHubIcon color="primary"/></IconButton>
+        </Card>
+
+        {/* SWAPIFY */}
+        <Card className={classes.card}>
+            <CardHeader
+                avatar={
+                    <Icon color="primary">{swapify}</Icon>
+                }
+                action={
+                    <IconButton aria-label="more-info">
+                        <MoreVertIcon />
+                    </IconButton>
+                }
+                title={
+                    <h2>SWAPIFY</h2>
+                }
+            />
+            <CardContent>
+                <Typography className={classes.subheader}>
+                    <h4>Second-Hand Clothing and Shoe Exchange</h4>
+                    <Icon>{postgresql} {python} {django}</Icon>
+                </Typography>
+            </CardContent>
+            <CardMedia
+                className={classes.media}
+                image="./Swapify.png"
+                title="Swapify"
+            />
+             <IconButton className={classes.button} variant="contained" color="primary" href="https://teamswapify.herokuapp.com/" target="_blank" rel="noopener noreferrer"><LanguageIcon color="primary" /></IconButton>
+            <IconButton className={classes.button} variant="contained" color="primary" href="https://github.com/cubasve/Swapify" target="_blank" rel="noopener noreferrer"><GitHubIcon color="primary"/></IconButton>
+        </Card>
+        </div>
     )
 }
