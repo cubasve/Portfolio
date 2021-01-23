@@ -30,7 +30,7 @@ const mongoDB = <i class="devicon-mongodb-plain colored"></i>;
 const useStyles = makeStyles({
     card: {
         width: 270,
-        height: 440,
+        // height: 450,
         margin: 0,
     },
     cardHeader: {
@@ -52,20 +52,24 @@ const useStyles = makeStyles({
     description: {
         paddingRight: 5,
         paddingLeft: 5,
-    }
+    },
+    technologies: {
+        paddingRight: 70,
+        paddingLeft: 70,
+    },
 });
 
 export default function Proj() {
     const classes = useStyles();
 
-    const finesse = <FontAwesomeIcon icon={faDonate} size="2x" />
-    const swapify = <FontAwesomeIcon icon={faTshirt} size="2x" />
-    const slashTrash = <FontAwesomeIcon icon={faGlobeAmericas} size="2x" />
-    const bits = <FontAwesomeIcon icon={faUndoAlt} size="2x" />
-    const guaranteed = <FontAwesomeIcon icon={faCheckCircle} size="2x" />
+    /*const finesse = <FontAwesomeIcon icon={faDonate} size="2x" />
+    // const swapify = <FontAwesomeIcon icon={faTshirt} size="2x" />
+    // const slashTrash = <FontAwesomeIcon icon={faGlobeAmericas} size="2x" />
+    // const bits = <FontAwesomeIcon icon={faUndoAlt} size="2x" />
+    // const guaranteed = <FontAwesomeIcon icon={faCheckCircle} size="2x" /> */
 
     return (
-        <>
+        <div className="card">
             {projectData.map(project => {
                 return (
                     <div className="card">
@@ -88,7 +92,7 @@ export default function Proj() {
                                     />
                                     <CardContent className={classes.subheader}>
                                         <Typography>
-                                            <Icon>{project.technologies.map(tech => tech)}</Icon>
+                                            <Icon className={classes.technologies}>{project.technologies.map(tech => tech)}</Icon>
                                             <h4>{project.subheader}</h4>
                                             <br />
                                         </Typography>
@@ -125,7 +129,7 @@ export default function Proj() {
                     </div >
                 )
             })}
-        </>
+        </div>
     )
 }
 
