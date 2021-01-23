@@ -1,9 +1,16 @@
 # Portfolio
 
+## Table of Contents:
+- [Description](#description)
+- [Screenshots](#screenshots)
+- [Technologies](#technologies)
+- [Getting Started](#getting-started)
+- [Next Steps](#next-steps)
+
 ## Description
 My portfolio website that showcases my projects.
 
-## Screenshots of Application
+## Screenshots
 ![image](https://user-images.githubusercontent.com/62129720/95937700-595e0c00-0da6-11eb-87e0-da834af64ad1.png)
 
 ![image](https://user-images.githubusercontent.com/62129720/95937763-7b578e80-0da6-11eb-9580-a860dfe47b1f.png)
@@ -14,21 +21,20 @@ My portfolio website that showcases my projects.
 
 ![image](https://user-images.githubusercontent.com/62129720/95937919-cbceec00-0da6-11eb-973d-1a8bde9e3094.png)
 
-## Technologies Used
+## Technologies
 - React
 - Netlify
+
+## Dependencies
+- Font Awesome
+- Material UI
+- React Scrollspy
+- React Typing Effect
+- React-Flippy
 
 ## Getting Started
 [Portfolio](https://cubasve.com)
 
-## Dependencies
-- Font Awesome: `npm i --save @fortawesome/fontawesome-free`
-- Material UI: `npm i @material-ui/core`
-- React Scrollspy: `npm i react-scrollspy`
-- React Typing Effect: `npm i --save react-typing-effect`
-- React Swipeable Views: `npm i --save react-swipeable-views`
-
-## Next Steps: Future Enhancements
-- Navbar: responsive design for mobile
+## Next Steps
 - Navbar: position fixed or sticky
-- Width matches the screen
+- Update introduction

@@ -1,6 +1,6 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { Card, CardContent, Typography, Tooltip, IconButton } from '@material-ui/core';
+import { makeStyles, withStyles } from '@material-ui/core/styles';
+import { Card, CardContent, Typography, Tooltip, IconButton, Zoom } from '@material-ui/core';
 import './Skills.css';
 
 const useStyles = makeStyles({
@@ -8,7 +8,7 @@ const useStyles = makeStyles({
         minWidth: 275,
         margin: 20,
     },
-    title: {
+    category: {
         paddingBottom: 20,
     },
     // icon: {
@@ -18,6 +18,10 @@ const useStyles = makeStyles({
         fontSize: 48,
         paddingLeft: 5,
         paddingRight: 5,
+    },
+    tooltip: {
+        fontSize: 25,
+        color: 'black',
     },
 });
 
@@ -39,6 +43,15 @@ const git = <i class="devicon-git-plain colored"></i>;
 const gitHub = <i class="devicon-github-plain colored"></i>;
 const heroku = <i class="devicon-heroku-plain colored"></i>;
 
+const LightTooltip = withStyles((theme) => ({
+    tooltip: {
+        backgroundColor: 'tan',
+        color: 'black',
+        boxShadow: theme.shadows[1],
+        fontSize: 16,
+    },
+}))(Tooltip);
+
 export default function Skills() {
     const classes = useStyles();
 
@@ -48,75 +61,75 @@ export default function Skills() {
             <div className="Skills">
                 <Card className={classes.card}>
                     <CardContent>
-                        <Typography variant="h5" className={classes.title}>FRONT-END</Typography>
-                        <Typography variant="h3" className={classes.icon}>{html} {css} {javascript} {react} {jQuery}</Typography>
+                        <Typography variant="h5" className={classes.category}>FRONT-END</Typography>
+                        {/* <Typography variant="h3" className={classes.icon}>{html} {css} {javascript} {react} {jQuery}</Typography> */}
                         <Typography>
-                            <Tooltip title="HTML">
+                            <LightTooltip title="HTML" TransitionComponent={Zoom}>
                                 <IconButton aria-label="HTML" className={classes.skill}>{html}</IconButton>
-                            </Tooltip>
-                            <Tooltip title="CSS">
+                            </LightTooltip>
+                            <LightTooltip title="CSS" TransitionComponent={Zoom}>
                                 <IconButton aria-label="CSS" className={classes.skill}>{css}</IconButton>
-                            </Tooltip>
-                            <Tooltip title="JavaScript">
+                            </LightTooltip>
+                            <LightTooltip title="JavaScript" TransitionComponent={Zoom}>
                                 <IconButton aria-label="JavaScript" className={classes.skill}>{javascript}</IconButton>
-                            </Tooltip>
-                            <Tooltip title="React">
+                            </LightTooltip>
+                            <LightTooltip title="React" TransitionComponent={Zoom}>
                                 <IconButton aria-label="React" className={classes.skill}>{react}</IconButton>
-                            </Tooltip>
-                            <Tooltip title="jQuery">
+                            </LightTooltip>
+                            <LightTooltip title="jQuery" TransitionComponent={Zoom}>
                                 <IconButton aria-label="jQuery" className={classes.skill}>{jQuery}</IconButton>
-                            </Tooltip>
+                            </LightTooltip>
                         </Typography>
                     </CardContent>
                 </Card>
 
                 <Card className={classes.card}>
                     <CardContent>
-                        <Typography variant="h5" className={classes.title}>BACK-END</Typography>
-                        <Typography variant="h3" className={classes.icon}>{express} {node} {python} {django}{mongoDB}{postgresql}</Typography>
+                        <Typography variant="h5" className={classes.category}>BACK-END</Typography>
+                        {/* <Typography variant="h3" className={classes.icon}>{express} {node} {python} {django}{mongoDB}{postgresql}</Typography> */}
                         <Typography>
-                            <Tooltip title="Express">
+                            <LightTooltip title="Express" TransitionComponent={Zoom}>
                                 <IconButton aria-label="Express" className={classes.skill}>{express}</IconButton>
-                            </Tooltip>
-                            <Tooltip title="Node">
+                            </LightTooltip>
+                            <LightTooltip title="Node" TransitionComponent={Zoom}>
                                 <IconButton aria-label="Node" className={classes.skill}>{node}</IconButton>
-                            </Tooltip>
-                            <Tooltip title="Python">
+                            </LightTooltip>
+                            <LightTooltip title="Python" TransitionComponent={Zoom}>
                                 <IconButton aria-label="Python" className={classes.skill}>{python}</IconButton>
-                            </Tooltip>
-                            <Tooltip title="Django">
+                            </LightTooltip>
+                            <LightTooltip title="Django" TransitionComponent={Zoom}>
                                 <IconButton aria-label="Django" className={classes.skill}>{django}</IconButton>
-                            </Tooltip>
-                            <Tooltip title="MongoDB">
+                            </LightTooltip>
+                            <LightTooltip title="MongoDB" TransitionComponent={Zoom}>
                                 <IconButton aria-label="MongoDB" className={classes.skill}>{mongoDB}</IconButton>
-                            </Tooltip>
-                            <Tooltip title="PostgreSQL">
+                            </LightTooltip>
+                            <LightTooltip title="PostgreSQL" TransitionComponent={Zoom}>
                                 <IconButton aria-label="PostgreSQL" className={classes.skill}>{postgresql}</IconButton>
-                            </Tooltip>
+                            </LightTooltip>
                         </Typography>
                     </CardContent>
                 </Card>
 
                 <Card className={classes.card}>
                     <CardContent>
-                        <Typography variant="h5" className={classes.title}>TOOLS</Typography>
-                        <Typography variant="h3" className={classes.icon}>{git} {gitHub} {heroku} {trello} {vsCode}</Typography>
+                        <Typography variant="h5" className={classes.category}>TOOLS</Typography>
+                        {/* <Typography variant="h3" className={classes.icon}>{git} {gitHub} {heroku} {trello} {vsCode}</Typography> */}
                         <Typography>
-                            <Tooltip title="Git">
+                            <LightTooltip title="Git" TransitionComponent={Zoom}>
                                 <IconButton aria-label="Git" className={classes.skill}>{git}</IconButton>
-                            </Tooltip>
-                            <Tooltip title="GitHub">
+                            </LightTooltip>
+                            <LightTooltip title="GitHub" TransitionComponent={Zoom}>
                                 <IconButton aria-label="GitHub" className={classes.skill}>{gitHub}</IconButton>
-                            </Tooltip>
-                            <Tooltip title="Heroku">
+                            </LightTooltip>
+                            <LightTooltip title="Heroku" TransitionComponent={Zoom}>
                                 <IconButton aria-label="Heroku" className={classes.skill}>{heroku}</IconButton>
-                            </Tooltip>
-                            <Tooltip title="Trello">
+                            </LightTooltip>
+                            <LightTooltip title="Trello" TransitionComponent={Zoom}>
                                 <IconButton aria-label="Trello" className={classes.skill}>{trello}</IconButton>
-                            </Tooltip>
-                            <Tooltip title="VS Code">
+                            </LightTooltip>
+                            <LightTooltip title="VS Code" TransitionComponent={Zoom}>
                                 <IconButton aria-label="VS Code" className={classes.skill}>{vsCode}</IconButton>
-                            </Tooltip>
+                            </LightTooltip>
                         </Typography>
                     </CardContent>
                 </Card>
