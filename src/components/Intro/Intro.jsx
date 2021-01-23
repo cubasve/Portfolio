@@ -1,4 +1,5 @@
 import React from 'react';
+import './Intro.css';
 import ReactTypingEffect from 'react-typing-effect';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -10,18 +11,15 @@ const useStyles = makeStyles({
     icon: {
         margin: 20,
     },
-    brand: {
-        margin: 80,
-    }
 });
 
 export default function Intro() {
     const classes = useStyles();
     return (
-        <>
-            <br />
-            <br />
-            <div className="Contact-Icons" id="intro">
+        <div class="landing-page" id="intro">
+            {/* <br />
+            <br /> */}
+            <div className="Contact-Icons">
                 <Typography variant="h3" className="Contact">
                     <Link className={classes.icon} href="mailto:cubasve@gmail.com" color="inherit"><FontAwesomeIcon icon={faEnvelope} size="10px" /></Link>
                 </Typography>
@@ -40,11 +38,7 @@ export default function Intro() {
                     <h2><FontAwesomeIcon icon={faTerminal} /> <span id="name"><ReactTypingEffect text={['Eva Cubas Vasquez']} typingDelay={1000} speed={100} eraseSpeed={200} eraseDelay={1000000} /></span></h2>
                     <h3>Full-Stack Web Developer</h3>
                 </div>
-                <div className={classes.brand}>
-                    <h4>I am passionate about web development and personal development, which are merged together to create my projects.</h4>
-                    <h4>My mission is to make a positive impact in a technology-driven world by using innovation to engineer software.</h4>
-                </div>
             </div >
-        </>
+        </div>
     )
 }

@@ -1,5 +1,7 @@
 .About {
-    padding: 50px;
+    padding-top: 0px;
+    padding-left: 50px;
+    padding-right: 50px;
     display: flex;
     flex-direction: column;
 }
@@ -10,8 +12,18 @@
 }
 
 #about {
-    margin-bottom: 0px;
+    padding-bottom: 0px;
 }
+
+.statement {
+    font-size: calc(10px + 2vmin);
+    margin-bottom: 30px;
+}
+
+/* .brand {
+    display: flex;
+
+} */
 
 @media only screen and (min-width: 1070px) {
     #about {
@@ -19,16 +31,21 @@
     }
 
     .About {
-        padding: 90px;
+        padding: 40px 90px;
         display: grid;
         grid-template-columns: 25% 75%;
         justify-items: start;
-        justify-content: start;
+        justify-content: space-evenly;
+        justify-self: start;
     }
     
     .account {
         display: flex;
         justify-items: center;
         align-items: center;
+    }
+
+    .brand {
+        margin-bottom: 30px;
     }
 }
