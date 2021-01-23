@@ -8,8 +8,7 @@ import AccountTreeIcon from '@material-ui/icons/AccountTree';
 import WbIncandescentIcon from '@material-ui/icons/WbIncandescent';
 
 const useStyles = makeStyles({
-    brand: {
-        fontSize: 20,
+    icon: {
     },
 });
 
@@ -25,12 +24,11 @@ export default function About() {
                 </div>
 
                 <div className="brand">
-                    <Typography className={classes.brand}>
-                        <IconButton><AccountTreeIcon color="primary" style={{ fontSize: 40 }} /></IconButton><span className="statement">I am passionate about web development and personal development, which are merged together to create my projects.</span>
+                    <Typography>
+                        <IconButton><AccountTreeIcon color="primary" className={classes.icon} style={{ fontSize: 40 }} /></IconButton><span className="statement development">I am passionate about web development and personal development, which are merged together to create my projects.</span>
                     </Typography>
-                    <br />
-                    <Typography className={classes.brand}>
-                        <IconButton><WbIncandescentIcon color="primary" style={{ fontSize: 40 }} /></IconButton><span className="statement">My mission is to make a positive impact in a technology-driven world by using innovation to engineer software.</span>
+                    <Typography>
+                        <IconButton><WbIncandescentIcon color="primary" className={classes.icon} style={{ fontSize: 40 }} /></IconButton><span className="statement">My mission is to make a positive impact in a technology-driven world by using innovation to engineer software.</span>
                     </Typography>
                 </div>
             </div>

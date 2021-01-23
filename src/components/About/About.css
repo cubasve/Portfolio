@@ -18,34 +18,46 @@
 .statement {
     font-size: calc(10px + 2vmin);
     margin-bottom: 30px;
+    line-height: 1.6cm;
 }
 
-/* .brand {
-    display: flex;
-
-} */
+@media only screen and (max-width: 724px) {
+    .statement {
+        line-height: 1.75cm;
+    }
+    .account {
+        padding-top: 0px;
+    }
+    .About {
+        padding-top: 0px;
+    }
+    #about {
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+    }
+}
 
 @media only screen and (min-width: 1070px) {
     #about {
-        margin-bottom: 0px;
+        margin-bottom: 5px;
     }
-
     .About {
         padding: 40px 90px;
         display: grid;
         grid-template-columns: 25% 75%;
-        justify-items: start;
-        justify-content: space-evenly;
-        justify-self: start;
-    }
-    
+        /* justify-items: start; */
+        /* justify-content: space-evenly; */
+        /* justify-self: start; */
+    } 
     .account {
         display: flex;
         justify-items: center;
         align-items: center;
     }
-
+    .statement {
+        line-height: 2cm;
+    }
     .brand {
-        margin-bottom: 30px;
+        text-align: justify;
     }
 }
