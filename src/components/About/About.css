@@ -11,20 +11,22 @@
     padding-top: 0px;
 }
 
-#about {
-    padding-bottom: 0px;
-}
-
 .statement {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: flex-start; 
     font-size: calc(10px + 2vmin);
-    margin-bottom: 30px;
-    line-height: 1.6cm;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.brand {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    /* justify-content: flex-start;  */
 }
 
 @media only screen and (max-width: 724px) {
-    .statement {
-        line-height: 1.75cm;
-    }
     .account {
         padding-top: 0px;
     }
@@ -37,17 +39,13 @@
     }
 }
 
-@media only screen and (min-width: 1070px) {
-    #about {
-        margin-bottom: 5px;
-    }
+@media only screen and (min-width: 1110px) {
     .About {
-        padding: 40px 90px;
+        padding-top: 20px;
+        padding-left: 90px;
+        padding-right: 90px;
         display: grid;
         grid-template-columns: 25% 75%;
-        /* justify-items: start; */
-        /* justify-content: space-evenly; */
-        /* justify-self: start; */
     } 
     .account {
         display: flex;
@@ -55,9 +53,7 @@
         align-items: center;
     }
     .statement {
-        line-height: 2cm;
-    }
-    .brand {
-        text-align: justify;
+        margin-bottom: 15px;
+        margin-top: 15px;
     }
 }
