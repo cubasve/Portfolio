@@ -1,7 +1,7 @@
 import React from 'react';
 import './Projects.css';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { Card, CardHeader, CardMedia, CardContent, CardActions, Typography, IconButton, Button, Avatar, Icon } from '@material-ui/core';
+import { Card, CardHeader, CardMedia, CardContent, CardActions, Typography, IconButton, Button, Avatar, Icon, Collapse } from '@material-ui/core';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LanguageIcon from '@material-ui/icons/Language';
@@ -52,10 +52,25 @@ const useStyles = makeStyles({
     //     marginRight: 50,
     //     marginTop: 0,
     // }
+    expand: {
+    transform: 'rotate(0deg)',
+    marginLeft: 'auto',
+    // transition: theme.transitions.create('transform', {
+    //   duration: theme.transitions.duration.shortest,
+    // }),
+    },
+    expandOpen: {
+    transform: 'rotate(180deg)',
+    },
 });
 
 export default function Proj() {
     const classes = useStyles();
+    const [expanded, setExpanded] = React.useState(false);
+
+    const handleExpandClick = () => {
+    setExpanded(!expanded);
+    };
 
     const finesse = <FontAwesomeIcon icon={faDonate} size="2x" />
     const swapify = <FontAwesomeIcon icon={faTshirt} size="2x" />
@@ -69,7 +84,7 @@ export default function Proj() {
         <Card className={classes.card}>
             <CardHeader
                 avatar={
-                    <Icon color="primary">{finesse}</Icon>
+                    <Icon color="primary" className={classes.expand} classname={classes.expandOpen} onClick={handleExpandClick} aria-expanded={expanded}>{finesse}</Icon>
                 }
                 // // action={
                 // //     <IconButton aria-label="more-info">
@@ -81,6 +96,13 @@ export default function Proj() {
                 }
                 className={classes.cardHeader}
             />
+            <Collapse in={expanded} timeout="auto" unmountOnExit>
+                <CardContent>
+                <Typography>
+                    Set aside off of the heat to let rest for 10 minutes, and then serve.
+                </Typography>
+                </CardContent>
+            </Collapse>
              <CardMedia
                 className={classes.media}
                 image="./Finesse.png"
@@ -94,8 +116,10 @@ export default function Proj() {
                 </Typography>
             </CardContent>
             <IconButton
-                className={classes.button} variant="contained" href="https://drippininfinesse.herokuapp.com/" target="_blank" rel="noopener noreferrer"><LanguageIcon color="primary" /></IconButton>
-            <IconButton className={classes.button} variant="contained" href="https://github.com/cubasve/Finesse" target="_blank" rel="noopener noreferrer"><GitHubIcon color="primary" /></IconButton>
+                className={classes.button} aria-label="demo" variant="contained" href="https://drippininfinesse.herokuapp.com/" target="_blank" rel="noopener noreferrer"><LanguageIcon color="primary" /></IconButton>
+            <IconButton className={classes.button} aria-label="code" variant="contained" href="https://github.com/cubasve/Finesse" target="_blank" rel="noopener noreferrer"><GitHubIcon color="primary" /></IconButton>
+
+            {/* DESCRIPTION */}
         </Card>
 
         {/* SLASH TRASH */}
