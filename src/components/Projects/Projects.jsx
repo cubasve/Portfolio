@@ -36,21 +36,21 @@ function allyProps(index) {
     }
 }
 
-const html = <i class="devicon-html5-plain colored"></i>;
-const css = <i class="devicon-css3-plain colored"></i>;
+// const html = <i class="devicon-html5-plain colored"></i>;
+// const css = <i class="devicon-css3-plain colored"></i>;
 const bootstrap = <i class="devicon-bootstrap-plain colored"></i>;
-const javascript = <i class="devicon-javascript-plain colored"></i>;
+// const javascript = <i class="devicon-javascript-plain colored"></i>;
 const react = <i class="devicon-react-original colored"></i>
-const jQuery = <i class="devicon-jquery-plain colored"></i>;
+// const jQuery = <i class="devicon-jquery-plain colored"></i>;
 const postgresql = <i class="devicon-postgresql-plain colored"></i>;
 const python = <i class="devicon-python-plain colored"></i>;
 const django = <i class="devicon-django-plain"></i>;
 const express = <i class="devicon-express-original"></i>;
 const node = <i class="devicon-nodejs-plain colored"></i>;
 const mongoDB = <i class="devicon-mongodb-plain colored"></i>;
-const git = <i class="devicon-git-plain colored"></i>;
-const gitHub = <i class="devicon-github-plain colored"></i>;
-const heroku = <i class="devicon-heroku-plain colored"></i>;
+// const git = <i class="devicon-git-plain colored"></i>;
+// const gitHub = <i class="devicon-github-plain colored"></i>;
+// const heroku = <i class="devicon-heroku-plain colored"></i>;
 
 const useStyles = makeStyles({
     button: {
@@ -81,8 +81,8 @@ export default function Projects() {
     const finesse = <FontAwesomeIcon icon={faDonate} size="3x" />
     const swapify = <FontAwesomeIcon icon={faTshirt} size="3x" />
     const slashTrash = <FontAwesomeIcon icon={faGlobeAmericas} size="3x" />
-    const bits = <FontAwesomeIcon icon={faUndoAlt} size="3x" />
-    const guaranteed = <FontAwesomeIcon icon={faCheckCircle} size="3x" />
+    // const bits = <FontAwesomeIcon icon={faUndoAlt} size="3x" />
+    // const guaranteed = <FontAwesomeIcon icon={faCheckCircle} size="3x" />
     // const hangman = <FontAwesomeIcon icon={faStreetView} size="3x" />
 
 
