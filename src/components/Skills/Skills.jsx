@@ -19,6 +19,11 @@ const useStyles = makeStyles({
         paddingLeft: 5,
         paddingRight: 5,
     },
+    backend: {
+        fontSize: 48,
+        paddingLeft: 2,
+        paddingRight: 2,
+    },
     tooltip: {
         fontSize: 25,
         color: 'black',
@@ -89,22 +94,22 @@ export default function Skills() {
                         {/* <Typography variant="h3" className={classes.icon}>{express} {node} {python} {django}{mongoDB}{postgresql}</Typography> */}
                         <Typography>
                             <LightTooltip title="Express" TransitionComponent={Zoom}>
-                                <IconButton aria-label="Express" className={classes.skill}>{express}</IconButton>
+                                <IconButton aria-label="Express" className={classes.backend}>{express}</IconButton>
                             </LightTooltip>
                             <LightTooltip title="Node" TransitionComponent={Zoom}>
-                                <IconButton aria-label="Node" className={classes.skill}>{node}</IconButton>
+                                <IconButton aria-label="Node" className={classes.backend}>{node}</IconButton>
                             </LightTooltip>
                             <LightTooltip title="Python" TransitionComponent={Zoom}>
-                                <IconButton aria-label="Python" className={classes.skill}>{python}</IconButton>
+                                <IconButton aria-label="Python" className={classes.backend}>{python}</IconButton>
                             </LightTooltip>
                             <LightTooltip title="Django" TransitionComponent={Zoom}>
-                                <IconButton aria-label="Django" className={classes.skill}>{django}</IconButton>
+                                <IconButton aria-label="Django" className={classes.backend}>{django}</IconButton>
                             </LightTooltip>
                             <LightTooltip title="MongoDB" TransitionComponent={Zoom}>
-                                <IconButton aria-label="MongoDB" className={classes.skill}>{mongoDB}</IconButton>
+                                <IconButton aria-label="MongoDB" className={classes.backend}>{mongoDB}</IconButton>
                             </LightTooltip>
                             <LightTooltip title="PostgreSQL" TransitionComponent={Zoom}>
-                                <IconButton aria-label="PostgreSQL" className={classes.skill}>{postgresql}</IconButton>
+                                <IconButton aria-label="PostgreSQL" className={classes.backend}>{postgresql}</IconButton>
                             </LightTooltip>
                         </Typography>
                     </CardContent>

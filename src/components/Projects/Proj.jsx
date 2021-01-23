@@ -2,8 +2,8 @@ import React from 'react';
 import projectData from './projectData.js';
 import './Proj.css';
 import Flippy, { FrontSide, BackSide } from 'react-flippy';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { Card, CardHeader, CardMedia, CardContent, Typography, IconButton, Icon } from '@material-ui/core';
+import { makeStyles, withStyles } from '@material-ui/core/styles';
+import { Card, CardHeader, CardMedia, CardContent, Typography, IconButton, Icon, Tooltip, Zoom } from '@material-ui/core';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LanguageIcon from '@material-ui/icons/Language';
 import YouTubeIcon from '@material-ui/icons/YouTube';
@@ -38,6 +38,15 @@ const useStyles = makeStyles({
         marginTop: 0,
     },
 });
+
+const LightTooltip = withStyles((theme) => ({
+    tooltip: {
+        backgroundColor: 'tan',
+        color: 'black',
+        boxShadow: theme.shadows[1],
+        fontSize: 16,
+    },
+}))(Tooltip);
 
 export default function Proj() {
     const classes = useStyles();
@@ -90,10 +99,16 @@ export default function Proj() {
                                                 <p className={classes.subheader}>{project.description}</p>
                                             </Typography>
                                         </CardContent>
-                                        <IconButton
-                                            className={classes.button} aria-label="demo" variant="contained" href={project.demoLink} target="_blank" rel="noopener noreferrer"><LanguageIcon color="primary" /></IconButton>
-                                        <IconButton className={classes.button} aria-label="code" variant="contained" href={project.codeLink} target="_blank" rel="noopener noreferrer"><GitHubIcon color="primary" /></IconButton>
-                                        {/* <IconButton className={classes.button} aria-label="code" variant="contained" href={project.youtubeLink} target="_blank" rel="noopener noreferrer"><YouTubeIcon color="primary" /></IconButton> */}
+                                        <LightTooltip title="Demo" TransitionComponent={Zoom}>
+                                            <IconButton
+                                                className={classes.button} aria-label="demo" variant="contained" href={project.demoLink} target="_blank" rel="noopener noreferrer"><LanguageIcon color="primary" /></IconButton>
+                                        </LightTooltip>
+                                        <LightTooltip title="Code" TransitionComponent={Zoom}>
+                                            <IconButton className={classes.button} aria-label="code" variant="contained" href={project.codeLink} target="_blank" rel="noopener noreferrer"><GitHubIcon color="primary" /></IconButton>
+                                        </LightTooltip>
+                                        {/* <LightTooltip title="Youtube Video" TransitionComponent={Zoom}></LightTooltip>
+                                        <IconButton className={classes.button} aria-label="code" variant="contained" href={project.youtubeLink} target="_blank" rel="noopener noreferrer"><YouTubeIcon color="primary" /></IconButton>
+                                        </LightTooltip> */}
                                     </Card>
                                 </BackSide>
                             </Flippy>
@@ -101,6 +116,6 @@ export default function Proj() {
                     )
                 })}
             </div >
-        </div>
+        </div >
     )
 }
