@@ -30,7 +30,7 @@ const useStyles = makeStyles({
     card: {
         width: 270,
         height: 440,
-        margin: 20,
+        margin: 0,
     },
     cardHeader: {
     },
@@ -48,11 +48,10 @@ const useStyles = makeStyles({
     button: {
         paddingTop: 0,
     },
-    // description: {
-    //     marginLeft: 50,
-    //     marginRight: 50,
-    //     marginTop: 0,
-    // }
+    description: {
+        paddingRight: 5,
+        paddingLeft: 5,
+    }
 });
 
 export default function Proj() {
@@ -109,7 +108,7 @@ export default function Proj() {
                             className={classes.cardHeader}
                         />
                         <CardContent className={classes.subheader}>
-                            <Typography>
+                            <Typography className={classes.description}>
                                 <p>Finesse tracks a user's personal financial statements and teaches financial literacy. It aims to demystify financial jargon so it is easy to understand. This application's concepts are based on Robert Kiyosaki's "Increase Your Financial IQ," with additional features implemented.</p>
                             </Typography>
                         </CardContent>
@@ -177,87 +176,162 @@ export default function Proj() {
             </Flippy>
 
             {/* ------------------------------SWAPIFY */}
-            <Card className={classes.card}>
-                <CardHeader
-                    avatar={
-                        <Icon color="primary">{swapify}</Icon>
-                    }
-                    title={
-                        <h2>SWAPIFY</h2>
-                    }
-                    className={classes.cardHeader}
-                />
-                <CardMedia
-                    className={classes.media}
-                    image="./Swapify.png"
-                    title="Swapify"
-                />
-                <CardContent>
-                    <Typography className={classes.subheader}>
-                        <Icon>{postgresql} {python} {django}</Icon>
-                        <h4>Second-Hand Clothing and Shoe Exchange</h4>
-                    </Typography>
-                </CardContent>
-                <IconButton className={classes.button} variant="contained" href="https://teamswapify.herokuapp.com/" target="_blank" rel="noopener noreferrer"><LanguageIcon color="primary" /></IconButton>
-                <IconButton className={classes.button} variant="contained" href="https://github.com/cubasve/Swapify" target="_blank" rel="noopener noreferrer"><GitHubIcon color="primary" /></IconButton>
-                <IconButton className={classes.button} variant="contained" href="" target="_blank" rel="noopener noreferrer"><YouTubeIcon color="primary" /></IconButton>
-            </Card>
+            <Flippy flipOnHover={true} flipOnClick={true} flipDirection="horizontal">
+                <FrontSide>
+                    <Card className={classes.card}>
+                        <CardHeader
+                            avatar={
+                                <Icon color="primary">{swapify}</Icon>
+                            }
+                            title={
+                                <h2>SWAPIFY</h2>
+                            }
+                            className={classes.cardHeader}
+                        />
+                        <CardMedia
+                            className={classes.media}
+                            image="./Swapify.png"
+                            title="Swapify"
+                        />
+                        <CardContent>
+                            <Typography className={classes.subheader}>
+                                <Icon>{postgresql} {python} {django}</Icon>
+                                <h4>Second-Hand Clothing and Shoe Exchange</h4>
+                            </Typography>
+                        </CardContent>
+                        <IconButton className={classes.button} variant="contained" href="https://teamswapify.herokuapp.com/" target="_blank" rel="noopener noreferrer"><LanguageIcon color="primary" /></IconButton>
+                        <IconButton className={classes.button} variant="contained" href="https://github.com/cubasve/Swapify" target="_blank" rel="noopener noreferrer"><GitHubIcon color="primary" /></IconButton>
+                        <IconButton className={classes.button} variant="contained" href="" target="_blank" rel="noopener noreferrer"><YouTubeIcon color="primary" /></IconButton>
+                    </Card>
+                </FrontSide>
+                <BackSide>
+                    <Card className={classes.card}>
+                        <CardHeader
+                            avatar={
+                                <Icon color="primary">{swapify}</Icon>
+                            }
+                            title={
+                                <h2>SWAPIFY</h2>
+                            }
+                            className={classes.cardHeader}
+                        />
+                        <CardContent>
+                            <Typography className={classes.subheader}>
+                                <p>Swapify is a collaborative project built by five developers. Shoes and clothing posted by the same user can be recommended to be styled together to form an outfit. Its purpose is to prevent fast fashion from being sent to landfills and instead promote the second-hand market.</p>
+                            </Typography>
+                        </CardContent>
+                        <IconButton className={classes.button} variant="contained" href="https://teamswapify.herokuapp.com/" target="_blank" rel="noopener noreferrer"><LanguageIcon color="primary" /></IconButton>
+                        <IconButton className={classes.button} variant="contained" href="https://github.com/cubasve/Swapify" target="_blank" rel="noopener noreferrer"><GitHubIcon color="primary" /></IconButton>
+                        <IconButton className={classes.button} variant="contained" href="" target="_blank" rel="noopener noreferrer"><YouTubeIcon color="primary" /></IconButton>
+                    </Card>
+                </BackSide>
+            </Flippy>
 
-            {/* BITS */}
-            < Card className={classes.card} >
-                <CardHeader
-                    avatar={
-                        <Icon color="primary">{bits}</Icon>
-                    }
-                    title={
-                        <h2>BITS</h2>
-                    }
-                    className={classes.cardHeader}
-                />
-                <CardMedia
-                    className={classes.media}
-                    image="./Swapify.png"
-                    title="Swapify"
-                />
-                <CardContent>
-                    <Typography className={classes.subheader}>
-                        <Icon>{mongoDB}{express} {react} {node} {bootstrap}</Icon>
-                        {/* <h4>Habit Generator, Detonator, and Tracker</h4> */}
-                        <h4>Habit Generator</h4>
-                        <br />
-                    </Typography>
-                </CardContent>
-                <IconButton className={classes.button} variant="contained" href="https://teamswapify.herokuapp.com/" target="_blank" rel="noopener noreferrer"><LanguageIcon color="primary" /></IconButton>
-                <IconButton className={classes.button} variant="contained" href="https://github.com/cubasve/Swapify" target="_blank" rel="noopener noreferrer"><GitHubIcon color="primary" /></IconButton>
-                <IconButton className={classes.button} variant="contained" href="" target="_blank" rel="noopener noreferrer"><YouTubeIcon color="primary" /></IconButton>
-            </Card >
+            {/* ---------------------------BITS */}
+            <Flippy flipOnHover={true} flipOnClick={true} flipDirection="horizontal">
+                <FrontSide>
+                    < Card className={classes.card} >
+                        <CardHeader
+                            avatar={
+                                <Icon color="primary">{bits}</Icon>
+                            }
+                            title={
+                                <h2>BITS</h2>
+                            }
+                            className={classes.cardHeader}
+                        />
+                        <CardMedia
+                            className={classes.media}
+                            image="./Swapify.png"
+                            title="Swapify"
+                        />
+                        <CardContent>
+                            <Typography className={classes.subheader}>
+                                <Icon>{mongoDB}{express} {react} {node} {bootstrap}</Icon>
+                                {/* <h4>Habit Generator, Detonator, and Tracker</h4> */}
+                                <h4>Habit Generator</h4>
+                                <br />
+                            </Typography>
+                        </CardContent>
+                        <IconButton className={classes.button} variant="contained" href="https://teamswapify.herokuapp.com/" target="_blank" rel="noopener noreferrer"><LanguageIcon color="primary" /></IconButton>
+                        <IconButton className={classes.button} variant="contained" href="https://github.com/cubasve/Swapify" target="_blank" rel="noopener noreferrer"><GitHubIcon color="primary" /></IconButton>
+                        <IconButton className={classes.button} variant="contained" href="" target="_blank" rel="noopener noreferrer"><YouTubeIcon color="primary" /></IconButton>
+                    </Card >
+                </FrontSide>
+                <BackSide>
+                    < Card className={classes.card} >
+                        <CardHeader
+                            avatar={
+                                <Icon color="primary">{bits}</Icon>
+                            }
+                            title={
+                                <h2>BITS</h2>
+                            }
+                            className={classes.cardHeader}
+                        />
+                        <CardContent>
+                            <Typography className={classes.subheader}>
+                                <p>Swapify is a collaborative project built by five developers. Shoes and clothing posted by the same user can be recommended to be styled together to form an outfit. Its purpose is to prevent fast fashion from being sent to landfills and instead promote the second-hand market.</p>
+                            </Typography>
+                        </CardContent>
+                        <IconButton className={classes.button} variant="contained" href="https://teamswapify.herokuapp.com/" target="_blank" rel="noopener noreferrer"><LanguageIcon color="primary" /></IconButton>
+                        <IconButton className={classes.button} variant="contained" href="https://github.com/cubasve/Swapify" target="_blank" rel="noopener noreferrer"><GitHubIcon color="primary" /></IconButton>
+                        <IconButton className={classes.button} variant="contained" href="" target="_blank" rel="noopener noreferrer"><YouTubeIcon color="primary" /></IconButton>
+                    </Card >
+                </BackSide>
+            </Flippy>
 
-            {/* GUARANTEED */}
-            < Card className={classes.card} >
-                <CardHeader
-                    avatar={
-                        <Icon color="primary">{guaranteed}</Icon>
-                    }
-                    title={
-                        <h2>GUARANTEED</h2>
-                    }
-                    className={classes.cardHeader}
-                />
-                <CardMedia
-                    className={classes.media}
-                    image="./Swapify.png"
-                    title="Swapify"
-                />
-                <CardContent>
-                    <Typography className={classes.subheader}>
-                        <Icon>{mongoDB}{express} {react} {node}</Icon>
-                        <h4>Lifetime Warranty Product Search Engine</h4>
-                    </Typography>
-                </CardContent>
-                <IconButton className={classes.button} variant="contained" href="https://teamswapify.herokuapp.com/" target="_blank" rel="noopener noreferrer"><LanguageIcon color="primary" /></IconButton>
-                <IconButton className={classes.button} variant="contained" href="https://github.com/cubasve/Swapify" target="_blank" rel="noopener noreferrer"><GitHubIcon color="primary" /></IconButton>
-                <IconButton className={classes.button} variant="contained" href="" target="_blank" rel="noopener noreferrer"><YouTubeIcon color="primary" /></IconButton>
-            </Card >
+            {/* ------------------------GUARANTEED */}
+            <Flippy flipOnHover={true} flipOnClick={true} flipDirection="horizontal">
+                <FrontSide>
+                    < Card className={classes.card} >
+                        <CardHeader
+                            avatar={
+                                <Icon color="primary">{guaranteed}</Icon>
+                            }
+                            title={
+                                <h2>GUARANTEED</h2>
+                            }
+                            className={classes.cardHeader}
+                        />
+                        <CardMedia
+                            className={classes.media}
+                            image="./Swapify.png"
+                            title="Swapify"
+                        />
+                        <CardContent>
+                            <Typography className={classes.subheader}>
+                                <Icon>{mongoDB}{express} {react} {node}</Icon>
+                                <h4>Lifetime Warranty Product Search Engine</h4>
+                            </Typography>
+                        </CardContent>
+                        <IconButton className={classes.button} variant="contained" href="https://teamswapify.herokuapp.com/" target="_blank" rel="noopener noreferrer"><LanguageIcon color="primary" /></IconButton>
+                        <IconButton className={classes.button} variant="contained" href="https://github.com/cubasve/Swapify" target="_blank" rel="noopener noreferrer"><GitHubIcon color="primary" /></IconButton>
+                        <IconButton className={classes.button} variant="contained" href="" target="_blank" rel="noopener noreferrer"><YouTubeIcon color="primary" /></IconButton>
+                    </Card >
+                </FrontSide>
+                <BackSide>
+                    < Card className={classes.card} >
+                        <CardHeader
+                            avatar={
+                                <Icon color="primary">{guaranteed}</Icon>
+                            }
+                            title={
+                                <h2>GUARANTEED</h2>
+                            }
+                            className={classes.cardHeader}
+                        />
+                        <CardContent>
+                            <Typography className={classes.subheader}>
+                                <p>Swapify is a collaborative project built by five developers. Shoes and clothing posted by the same user can be recommended to be styled together to form an outfit. Its purpose is to prevent fast fashion from being sent to landfills and instead promote the second-hand market.</p>
+                            </Typography>
+                        </CardContent>
+                        <IconButton className={classes.button} variant="contained" href="https://teamswapify.herokuapp.com/" target="_blank" rel="noopener noreferrer"><LanguageIcon color="primary" /></IconButton>
+                        <IconButton className={classes.button} variant="contained" href="https://github.com/cubasve/Swapify" target="_blank" rel="noopener noreferrer"><GitHubIcon color="primary" /></IconButton>
+                        <IconButton className={classes.button} variant="contained" href="" target="_blank" rel="noopener noreferrer"><YouTubeIcon color="primary" /></IconButton>
+                    </Card >
+                </BackSide>
+            </Flippy>
         </div >
     )
 }
