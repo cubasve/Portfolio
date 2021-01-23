@@ -26,11 +26,11 @@ export default function Navbar() {
             <AppBar position="static">
                 {/* <Toolbar className="Navbar"> */}
                 <Toolbar className={classes.navbar}>
-                    <Scrollspy items={['intro', 'projects', 'skills', 'contact']} currentClassName="is-current" offset={0}>
-                        <Link href="#intro" className={classes.link} id="nav-links"><FontAwesomeIcon icon={faLaptopCode} /> cubasve</Link>
+                    <Scrollspy items={['intro', 'about', 'projects', 'skills']} currentClassName="is-current" offset={0}>
+                        <Link href="#intro" className={classes.link} id="nav-links"><FontAwesomeIcon icon={faLaptopCode} /></Link>
+                        <Link href="#about" className={classes.link}>About</Link>
                         <Link href="#projects" className={classes.link}>Projects</Link>
                         <Link href="#skills" className={classes.link}>Skills</Link>
-                        {/* <Link href="#contact" className={classes.link}>Contact</Link> */}
                     </Scrollspy>
                 </Toolbar>
             </AppBar>
