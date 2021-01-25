@@ -16,8 +16,7 @@ export default function Contact() {
     const classes = useStyles();
     return (
         <>
-            {/* <h1 id="contact">Contact</h1> */}
-            <h1>Contact</h1>
+            <h1 id="contact">Contact</h1>
             <div className="Contact-Icons">
                 <Typography variant="h3" className="Contact">
                     <Link className={classes.icon} href="mailto:cubasve@gmail.com" color="inherit"><FontAwesomeIcon icon={faEnvelope} size="10px" /></Link>

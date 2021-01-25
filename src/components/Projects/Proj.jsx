@@ -6,7 +6,8 @@ import { makeStyles, withStyles } from '@material-ui/core/styles';
 import { Card, CardHeader, CardMedia, CardContent, Typography, IconButton, Icon, Tooltip, Zoom } from '@material-ui/core';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LanguageIcon from '@material-ui/icons/Language';
-import YouTubeIcon from '@material-ui/icons/YouTube';
+// import ComputerIcon from '@material-ui/icons/Computer';
+// import YouTubeIcon from '@material-ui/icons/YouTube';
 
 const useStyles = makeStyles({
     card: {
@@ -52,9 +53,9 @@ export default function Proj() {
     const classes = useStyles();
 
     return (
-        <div>
+        <>
             <h1 id="projects">Projects</h1>
-            <div className="card">
+            <section className="card">
                 {projectData.map(project => {
                     return (
                         <div>
@@ -115,7 +116,7 @@ export default function Proj() {
                         </div >
                     )
                 })}
-            </div >
-        </div >
+            </section>
+        </>
     )
 }

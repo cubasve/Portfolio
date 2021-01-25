@@ -2,8 +2,8 @@ import React from 'react';
 import './Intro.css';
 import ReactTypingEffect from 'react-typing-effect';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope, faMapMarkerAlt, faTerminal } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin, faGithub, faAngellist } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope, faMapMarkerAlt, faTerminal, faAddressCard, faIdBadge, faAddressBook } from '@fortawesome/free-solid-svg-icons';
 import { Link, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -17,8 +17,6 @@ export default function Intro() {
     const classes = useStyles();
     return (
         <div class="landing-page" id="intro">
-            {/* <br />
-            <br /> */}
             <div className="Contact-Icons">
                 <Typography variant="h3" className="Contact">
                     <Link className={classes.icon} href="mailto:cubasve@gmail.com" color="inherit"><FontAwesomeIcon icon={faEnvelope} size="10px" /></Link>
@@ -29,6 +27,12 @@ export default function Intro() {
                 <Typography variant="h3" className="Contact">
                     <Link className={classes.icon} href="https://www.linkedin.com/in/cubasve/" target="_blank" rel="noopener" color="inherit"><FontAwesomeIcon icon={faLinkedin} /></Link>
                 </Typography>
+                {/* <Typography variant="h3" className="Contact">
+                    <Link className={classes.icon} href="" target="_blank" rel="noopener" color="inherit"><FontAwesomeIcon icon={faAngellist} /></Link>
+                </Typography>
+                <Typography variant="h3" className="Contact">
+                    <Link className={classes.icon} href="" target="_blank" rel="noopener" color="inherit"><FontAwesomeIcon icon={faAddressBook} /></Link>
+                </Typography> */}
             </div>
 
             <div className="IntroduceYourself" >

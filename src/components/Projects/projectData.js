@@ -26,7 +26,6 @@ const projectData = [
         name: 'SLASH TRASH',
         subheader: 'Eco-Friendly Household Product Finder and Tracker',
         logo: <FontAwesomeIcon icon={faGlobeAmericas} size="2x" />,
-        // image: './SlashTrash.png',
         image: './NewSlashTrash.png',
         technologies: [
             <i class="devicon-mongodb-plain colored"></i>,
@@ -45,7 +44,6 @@ const projectData = [
         name: 'SWAPIFY',
         subheader: 'Second-Hand Clothing and Shoe Exchange',
         logo: <FontAwesomeIcon icon={faTshirt} size="2x" />,
-        // image: './Swapify.png',
         image: './NewSwapify.png',
         technologies: [
             <i class="devicon-postgresql-plain colored"></i>,
@@ -61,9 +59,9 @@ const projectData = [
     // {
     //     id: 4,
     //     name: 'BITS',
-    //     subheader: 'Habit Generator, Detonator, and Tracker', /* Habit Generator, Detonator, and Tracker */
+    //     subheader: 'Habit Generator', /* Habit Generator, Detonator, and Tracker */
     //     logo: <FontAwesomeIcon icon={faUndoAlt} size="2x" />,
-    //     image: './SlashTrash.png',
+    //     image: '',
     //     technologies: [
     //         <i class="devicon-mongodb-plain colored"></i>,
     //         <i class="devicon-express-original"></i>,
@@ -71,9 +69,9 @@ const projectData = [
     //         <i class="devicon-nodejs-plain colored"></i>,
     //         <i class="devicon-materialui-plain colored"></i>,
     //     ],
-    //     description: 'Swapify is a collaborative project built by five developers. Shoes and clothing posted by the same user can be recommended to be styled together to form an outfit. Its purpose is to prevent fast fashion from being sent to landfills and instead promote the second-hand market.',
-    //     demoLink: 'https://teamswapify.herokuapp.com/',
-    //     codeLink: 'https://github.com/cubasve/Swapify',
+    //     description: 'A system to successfully implement and sustain lifelong habits',
+    //     demoLink: '',
+    //     codeLink: '',
     //     youtubeLink: '',
     // },
     // {
@@ -81,7 +79,7 @@ const projectData = [
     //     name: 'GUARANTEED',
     //     subheader: 'Lifetime Warranty Product Search Engine',
     //     logo: <FontAwesomeIcon icon={faCheckCircle} size="2x" />,
-    //     image: './Swapify.png',
+    //     image: '',
     //     technologies: [
     //         <i class="devicon-mongodb-plain colored"></i>,
     //         <i class="devicon-express-original"></i>,
@@ -89,9 +87,9 @@ const projectData = [
     //         <i class="devicon-nodejs-plain colored"></i>,
     //         <i class="devicon-bootstrap-plain colored"></i>,
     //     ],
-    //     description: 'Swapify is a collaborative project built by five developers. Shoes and clothing posted by the same user can be recommended to be styled together to form an outfit. Its purpose is to prevent fast fashion from being sent to landfills and instead promote the second-hand market.',
-    //     demoLink: 'https://teamswapify.herokuapp.com/',
-    //     codeLink: 'https://github.com/cubasve/Swapify',
+    //     description: '',
+    //     demoLink: '',
+    //     codeLink: '',
     //     youtubeLink: '',
     // },
 ];
