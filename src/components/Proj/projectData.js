@@ -1,5 +1,5 @@
 import React from 'react';
-import { faDonate, faTshirt, faGlobeAmericas, faCheckCircle, faUndoAlt } from '@fortawesome/free-solid-svg-icons';
+import { faDonate, faTshirt, faGlobeAmericas, faCheckCircle, faUndoAlt, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const projectData = [
@@ -79,6 +79,42 @@ const projectData = [
     //     name: 'GUARANTEED',
     //     subheader: 'Lifetime Warranty Product Search Engine',
     //     logo: <FontAwesomeIcon icon={faCheckCircle} size="2x" />,
+    //     image: '',
+    //     technologies: [
+    //         <i class="devicon-mongodb-plain colored"></i>,
+    //         <i class="devicon-express-original"></i>,
+    //         <i class="devicon-react-original colored"></i>,
+    //         <i class="devicon-nodejs-plain colored"></i>,
+    //         <i class="devicon-bootstrap-plain colored"></i>,
+    //     ],
+    //     description: '',
+    //     demoLink: '',
+    //     codeLink: '',
+    //     youtubeLink: '',
+    // },
+    // {
+    //     id: 6,
+    //     name: 'TFSA',
+    //     subheader: '',
+    //     logo: <FontAwesomeIcon icon={faDonate} size="2x" />,
+    //     image: '',
+    //     technologies: [
+    //         <i class="devicon-mongodb-plain colored"></i>,
+    //         <i class="devicon-express-original"></i>,
+    //         <i class="devicon-react-original colored"></i>,
+    //         <i class="devicon-nodejs-plain colored"></i>,
+    //         <i class="devicon-bootstrap-plain colored"></i>,
+    //     ],
+    //     description: '',
+    //     demoLink: '',
+    //     codeLink: '',
+    //     youtubeLink: '',
+    // },
+    // {
+    //     id: 7,
+    //     name: 'EXTRAORDINARY',
+    //     subheader: '',
+    //     logo: <FontAwesomeIcon icon={faShoppingCart} size="2x" />,
     //     image: '',
     //     technologies: [
     //         <i class="devicon-mongodb-plain colored"></i>,

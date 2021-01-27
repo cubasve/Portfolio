@@ -11,7 +11,7 @@ import LanguageIcon from '@material-ui/icons/Language';
 
 const useStyles = makeStyles({
     card: {
-        width: 270,
+        width: 270, //width: 280 - need to change css grid
         height: 440,
         // margin: 0,
     },
@@ -22,10 +22,9 @@ const useStyles = makeStyles({
     media: {
         height: 0,
         // paddingTop: '56.25%', // 16:9
-        paddingTop: 200,
+        paddingTop: 200, //paddingTop: 210 - need to change css grid
         paddingLeft: 0,
         paddingRight: 0,
-        // width: 270,
     },
     subheader: {
         paddingRight: 5,

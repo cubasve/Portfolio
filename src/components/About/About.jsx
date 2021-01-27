@@ -18,10 +18,10 @@ export default function About() {
 
                 <div className="brand">
                     <div className="one statement">
-                        <IconButton><AccountTreeIcon color="primary" style={{ fontSize: 40 }} /></IconButton><span className="statement development">I am passionate about web development and personal development, which are merged together to create my projects.</span>
+                        <IconButton><AccountTreeIcon color="primary" style={{ fontSize: 40 }} /></IconButton><span className="statement development">My passion for web development and personal development are incorporated together to create transformative applications with purpose.</span>
                     </div>
                     <div className="two statement">
-                        <IconButton><WbIncandescentIcon color="primary" style={{ fontSize: 40 }} /></IconButton><span className="statement">My mission is to make a positive impact in a technology-driven world by using innovation to engineer software.</span>
+                        <IconButton><WbIncandescentIcon color="primary" style={{ fontSize: 40 }} /></IconButton><span className="statement">With my experience in education and science, my mission is to build revolutionary software that benefits humanity.</span>
                     </div>
                 </div>
             </div>
