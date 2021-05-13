@@ -1,5 +1,14 @@
 import React from 'react';
-import { faDonate, faTshirt, faGlobeAmericas, faCheckCircle, faUndoAlt, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { 
+    faDonate, 
+    faTshirt, 
+    faGlobeAmericas, 
+    faBookReader,
+    faVideo,
+    faCheckCircle, 
+    faUndoAlt, 
+    faShoppingCart
+} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const projectData = [
@@ -54,6 +63,37 @@ const projectData = [
         description: 'Swapify is a collaborative project built by five developers. Shoes and clothing posted by the same user can be recommended to be styled together to form an outfit. Its purpose is to prevent fast fashion from being sent to landfills and instead promote the second-hand market.',
         demoLink: 'https://teamswapify.herokuapp.com/',
         codeLink: 'https://github.com/cubasve/Swapify',
+        youtubeLink: '',
+    },
+    {
+        id: 4,
+        name: 'SCROLLS',
+        subheader: 'Virtual Scrolling Storybook',
+        logo: <FontAwesomeIcon icon={faBookReader} size="2x" />,
+        image: './NewSwapify.png',
+        technologies: [
+            <i class="devicon-react-original colored"></i>,
+            <i class="devicon-bootstrap-plain colored"></i>,
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/logo-man.svg" alt="GSAP" width="25" height="25" />,
+        ],
+        description: 'This application shares the main concepts of the ten scrolls from the book called "The Greatest Salesman in the World" by Og Mandino. It uses GSAP (GreenSock Animation Platform) for the scrolling animation.',
+        demoLink: '',
+        codeLink: 'https://github.com/cubasve/Scrolls',
+        youtubeLink: '',
+    },
+    {
+        id: 5,
+        name: 'SHOPPIES',
+        subheader: 'Movie Nominator',
+        logo: <FontAwesomeIcon icon={faVideo} size="2x" />,
+        image: './Shoppies.png',
+        technologies: [
+            <i class="devicon-react-original colored"></i>,
+            <i class="devicon-bootstrap-plain colored"></i>,
+        ],
+        description: 'Shoppies allows users to search for movies from the OMDB API and nominate up to 5 of their favourite movies.',
+        demoLink: 'https://the-shopppies.netlify.app/',
+        codeLink: 'https://github.com/cubasve/Shoppies',
         youtubeLink: '',
     },
     // {
