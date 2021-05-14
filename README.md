@@ -36,7 +36,7 @@ My portfolio website that showcases my projects.
 [Portfolio](https://cubasve.com)
 
 ## Next Steps
-- Resdesign navbar for tablet and mobile screens
+- Redesign navbar for tablet and mobile screens
 - Add more social accounts: Medium, AngelList, etc.
 - Do and add more projects!
 - Add more content for 'About Me' section
