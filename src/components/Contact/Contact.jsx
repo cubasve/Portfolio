@@ -1,7 +1,7 @@
 import React from 'react';
 import './Contact.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faGithub, faMedium } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { Link, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
@@ -19,13 +19,46 @@ export default function Contact() {
             <h1 id="contact">Contact</h1>
             <div className="Contact-Icons">
                 <Typography variant="h3" className="Contact">
-                    <Link className={classes.icon} href="mailto:cubasve@gmail.com" color="inherit"><FontAwesomeIcon icon={faEnvelope} size="10px" /></Link>
+                    <Link 
+                        className={classes.icon} 
+                        href="mailto:cubasve@gmail.com" 
+                        color="inherit"
+                    >
+                        <FontAwesomeIcon icon={faEnvelope} size="10px" />
+                    </Link>
                 </Typography>
                 <Typography variant="h3" className="Contact">
-                    <Link className={classes.icon} href="https://github.com/cubasve" target="_blank" rel="noopener" color="inherit"><FontAwesomeIcon icon={faGithub} /></Link>
+                    <Link 
+                        className={classes.icon} 
+                        href="https://github.com/cubasve" 
+                        target="_blank" 
+                        rel="noopener" 
+                        color="inherit"
+                    >
+                        <FontAwesomeIcon icon={faGithub} />
+                    </Link>
                 </Typography>
                 <Typography variant="h3" className="Contact">
-                    <Link className={classes.icon} href="https://www.linkedin.com/in/cubasve/" target="_blank" rel="noopener" color="inherit"><FontAwesomeIcon icon={faLinkedin} /></Link>
+                    <Link 
+                        className={classes.icon} 
+                        href="https://www.linkedin.com/in/cubasve/" 
+                        target="_blank" 
+                        rel="noopener" 
+                        color="inherit"
+                    >
+                        <FontAwesomeIcon icon={faLinkedin} />
+                    </Link>
+                </Typography>
+                <Typography variant="h3" className="Contact">
+                    <Link 
+                        className={classes.icon} 
+                        href="https://cubasve.medium.com/" 
+                        target="_blank" 
+                        rel="noopener" 
+                        color="inherit"
+                    >
+                        <FontAwesomeIcon icon={faMedium} />
+                    </Link>
                 </Typography>
             </div>
             <br />

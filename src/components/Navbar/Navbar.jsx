@@ -19,7 +19,10 @@ export default function Navbar() {
     return (
         <>
             <AppBar position="fixed">
-                <Scrollspy items={['intro', 'about', 'projects', 'skills', 'contact']} currentClassName="is-current" offset={0}>
+                <Scrollspy 
+                    items={['intro', 'about', 'projects', 'skills', 'contact']} 
+                    currentClassName="is-current" offset={0}
+                >
                     <Link href="#intro" className={classes.link} id="nav-links">
                         {/* <FontAwesomeIcon icon={faHome} /> */}
                          Home</Link>

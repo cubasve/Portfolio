@@ -1,6 +1,7 @@
 # Portfolio
 
 ## Table of Contents:
+
 - [Description](#description)
 - [Screenshots](#screenshots)
 - [Technologies](#technologies)
@@ -8,9 +9,11 @@
 - [Next Steps](#next-steps)
 
 ## Description
+
 My portfolio website that showcases my projects.
 
 ## Screenshots
+
 ![image](https://user-images.githubusercontent.com/62129720/118218168-e94f5b80-b444-11eb-9c58-433461b3abfb.png)
 
 ![image](https://user-images.githubusercontent.com/62129720/118218224-0b48de00-b445-11eb-8139-578ffafa9542.png)
@@ -22,10 +25,12 @@ My portfolio website that showcases my projects.
 ![image](https://user-images.githubusercontent.com/62129720/118218297-2fa4ba80-b445-11eb-82f0-04552dfb924a.png)
 
 ## Technologies
+
 - React
 - Netlify
 
 ## Dependencies
+
 - Font Awesome
 - Material UI
 - React Scrollspy
@@ -33,10 +38,12 @@ My portfolio website that showcases my projects.
 - React-Flippy
 
 ## Getting Started
+
 [Portfolio](https://cubasve.com)
 
 ## Next Steps
+
 - Redesign navbar for tablet and mobile screens
-- Add more social accounts: Medium, AngelList, etc.
+- Add more social accounts: Medium, AngelList, etc. and resume too!
 - Do and add more projects!
 - Add more content for 'About Me' section

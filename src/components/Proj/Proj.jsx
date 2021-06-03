@@ -3,7 +3,16 @@ import projectData from './projectData.js';
 import './Proj.css';
 import Flippy, { FrontSide, BackSide } from 'react-flippy';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
-import { Card, CardHeader, CardMedia, CardContent, Typography, IconButton, Icon, Tooltip, Zoom } from '@material-ui/core';
+import { 
+    Card, 
+    CardHeader, 
+    CardMedia, 
+    CardContent, 
+    Typography, 
+    IconButton, 
+    Icon, 
+    Tooltip, 
+    Zoom } from '@material-ui/core';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LanguageIcon from '@material-ui/icons/Language';
 // import ComputerIcon from '@material-ui/icons/Computer';
@@ -60,7 +69,7 @@ export default function Proj() {
                         <div>
                             <Flippy flipOnHover={true} flipOnClick={true} flipDirection="horizontal">
                                 <FrontSide>
-                                    <Card className={classes.card} key={project.id}>
+                                    <Card className={classes.card} key={project.name}>
                                         <CardHeader
                                             avatar={
                                                 <Icon color="primary">{project.logo}</Icon>
@@ -76,7 +85,9 @@ export default function Proj() {
                                             title={project.name}
                                         />
                                         <CardContent>
-                                            <span className="technologies">{project.technologies.map(tech => tech)}</span>
+                                            <span className="technologies">
+                                                {project.technologies.map(tech => tech)}
+                                            </span>
                                             <Typography className={classes.subheader}>
                                                 <h4>{project.subheader}</h4>
                                             </Typography>
@@ -101,13 +112,39 @@ export default function Proj() {
                                         </CardContent>
                                         <LightTooltip title="Demo" TransitionComponent={Zoom}>
                                             <IconButton
-                                                className={classes.button} aria-label="demo" variant="contained" href={project.demoLink} target="_blank" rel="noopener noreferrer"><LanguageIcon color="primary" /></IconButton>
+                                                className={classes.button} 
+                                                aria-label="demo" 
+                                                variant="contained" 
+                                                href={project.demoLink} 
+                                                target="_blank" 
+                                                rel="noopener noreferrer"
+                                            >
+                                                <LanguageIcon color="primary" />
+                                            </IconButton>
                                         </LightTooltip>
                                         <LightTooltip title="Code" TransitionComponent={Zoom}>
-                                            <IconButton className={classes.button} aria-label="code" variant="contained" href={project.codeLink} target="_blank" rel="noopener noreferrer"><GitHubIcon color="primary" /></IconButton>
+                                            <IconButton 
+                                                className={classes.button} 
+                                                aria-label="code" 
+                                                variant="contained" 
+                                                href={project.codeLink} 
+                                                target="_blank" 
+                                                rel="noopener noreferrer"
+                                            >
+                                                <GitHubIcon color="primary" />
+                                            </IconButton>
                                         </LightTooltip>
                                         {/* <LightTooltip title="Youtube Video" TransitionComponent={Zoom}></LightTooltip>
-                                        <IconButton className={classes.button} aria-label="code" variant="contained" href={project.youtubeLink} target="_blank" rel="noopener noreferrer"><YouTubeIcon color="primary" /></IconButton>
+                                        <IconButton 
+                                            className={classes.button} 
+                                            aria-label="code" 
+                                            variant="contained" 
+                                            href={project.youtubeLink} 
+                                            target="_blank" 
+                                            rel="noopener noreferrer"
+                                        >
+                                            <YouTubeIcon color="primary" />
+                                        </IconButton>
                                         </LightTooltip> */}
                                     </Card>
                                 </BackSide>
