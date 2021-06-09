@@ -3,11 +3,11 @@ import {
     faDonate, 
     faTshirt, 
     faGlobeAmericas, 
-    /*faBookReader,
+    // faBookReader,
     faVideo,
-    faCheckCircle, 
-    faUndoAlt, 
-    faShoppingCart*/
+    // faCheckCircle, 
+    faSyncAlt, 
+    // faShoppingCart
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -27,6 +27,23 @@ const projectData = [
         description: 'Finesse tracks a user\'s personal financial statements and teaches financial literacy. It aims to demystify financial jargon so it is easy to understand. This application\'s concepts are based on Robert Kiyosaki\'s "Increase Your Financial IQ," with additional features implemented.',
         demoLink: 'https://drippininfinesse.herokuapp.com/',
         codeLink: 'https://github.com/cubasve/Finesse',
+        youtubeLink: '',
+    },
+    {
+        name: 'BITS',
+        subheader: 'Habit Generator', /* Habit Generator, Detonator, and Tracker */
+        logo: <FontAwesomeIcon icon={faSyncAlt} size="2x" />,
+        image: './Bits.png',
+        technologies: [
+            <i class="devicon-mongodb-plain colored"></i>,
+            <i class="devicon-express-original"></i>,
+            <i class="devicon-react-original colored"></i>,
+            <i class="devicon-nodejs-plain colored"></i>,
+            <i class="devicon-materialui-plain colored"></i>,
+        ],
+        description: 'Bits provides a system for users to successfully build and sustain lifelong habits. This application\'s concepts are based on James Clear\'s "Atomic Habits".',
+        demoLink: 'https://bitssss.herokuapp.com/',
+        codeLink: 'https://github.com/cubasve/Bits',
         youtubeLink: '',
     },
     {
@@ -54,7 +71,6 @@ const projectData = [
         technologies: [
             <i class="devicon-postgresql-plain colored"></i>,
             <img src="./Python.svg" width="25" height="25" alt="Python" />,
-            // <i class="devicon-python-plain colored"></i>,
             <i class="devicon-django-plain"></i>,
             <i class="devicon-css3-plain colored"></i>,
         ],
@@ -63,6 +79,21 @@ const projectData = [
         codeLink: 'https://github.com/cubasve/Swapify',
         youtubeLink: '',
     },
+    {
+        name: 'SHOPPIES',
+        subheader: 'Movie Nominator',
+        logo: <FontAwesomeIcon icon={faVideo} size="2x" />,
+        image: './Shoppies.png',
+        technologies: [
+            <i class="devicon-react-original colored"></i>,
+            <i class="devicon-bootstrap-plain colored"></i>,
+        ],
+        description: 'Shoppies allows users to search for movies from the OMDB API and nominate up to 5 of their favourite movies.',
+        demoLink: 'https://the-shopppies.netlify.app/',
+        codeLink: 'https://github.com/cubasve/Shoppies',
+        youtubeLink: '',
+    },
+
     // {
     //     name: 'SCROLLS',
     //     subheader: 'Virtual Scrolling Storybook',
@@ -76,39 +107,6 @@ const projectData = [
     //     description: 'This application shares the main concepts of the ten scrolls from the book called "The Greatest Salesman in the World" by Og Mandino. It uses GSAP (GreenSock Animation Platform) for the scrolling animation.',
     //     demoLink: '',
     //     codeLink: 'https://github.com/cubasve/Scrolls',
-    //     youtubeLink: '',
-    // },
-    // {
-    //     name: 'SHOPPIES',
-    //     subheader: 'Movie Nominator',
-    //     logo: <FontAwesomeIcon icon={faVideo} size="2x" />,
-    //     image: './Shoppies.png',
-    //     technologies: [
-    //         <i class="devicon-react-original colored"></i>,
-    //         <i class="devicon-bootstrap-plain colored"></i>,
-    //     ],
-    //     description: 'Shoppies allows users to search for movies from the OMDB API and nominate up to 5 of their favourite movies.',
-    //     demoLink: 'https://the-shopppies.netlify.app/',
-    //     codeLink: 'https://github.com/cubasve/Shoppies',
-    //     youtubeLink: '',
-    // },
-
-    
-    // {
-    //     name: 'BITS',
-    //     subheader: 'Habit Generator', /* Habit Generator, Detonator, and Tracker */
-    //     logo: <FontAwesomeIcon icon={faUndoAlt} size="2x" />,
-    //     image: '',
-    //     technologies: [
-    //         <i class="devicon-mongodb-plain colored"></i>,
-    //         <i class="devicon-express-original"></i>,
-    //         <i class="devicon-react-original colored"></i>,
-    //         <i class="devicon-nodejs-plain colored"></i>,
-    //         <i class="devicon-materialui-plain colored"></i>,
-    //     ],
-    //     description: 'A system to successfully implement and sustain lifelong habits',
-    //     demoLink: '',
-    //     codeLink: '',
     //     youtubeLink: '',
     // },
     // {

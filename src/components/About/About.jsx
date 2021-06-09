@@ -24,7 +24,7 @@ export default function About() {
                             <AccountTreeIcon color="primary" style={{ fontSize: 40 }} />
                         </IconButton>
                         <span className="statement development">
-                            My passion for web development and personal development are incorporated together to create transformative applications with purpose.
+                            Compiling what I have learnt in life into applications and sharing that knowledge in a fun and interactive way.
                         </span>
                     </div>
                     <div className="two statement">
@@ -32,7 +32,7 @@ export default function About() {
                             <WbIncandescentIcon color="primary" style={{ fontSize: 40 }} />
                         </IconButton>
                         <span className="statement">
-                            With my experience in education and science, my mission is to build revolutionary software that benefits humanity.
+                            My passion for web development and personal development are incorporated together to achieve my mission of building revolutionary software with purpose.
                         </span>
                     </div>
                 </div>
