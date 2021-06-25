@@ -47,3 +47,10 @@ My portfolio website that showcases my projects.
 - Add more social accounts: Medium, AngelList, etc. and resume too!
 - Do and add more projects!
 - Add more content for 'About Me' section
+- New skills sections:
+  - Front-end: HTML, JavaScript, TypeScript, React, Redux, jQuery
+  - Back-end: Express, Node, Python, Django, MongoDB, PostgreSQL
+  - Tools: Git, Jest, npm, Bash, etc.
+  - Styling: CSS, Sass, Bootstrap, Material-UI, Materialize CSS, Tailwind CSS
+  - Hosting platforms: Heroku, Netlify, GitHub Pages, AWS, Azure
+  - Other: Figma, Trello, Jira, etc.
