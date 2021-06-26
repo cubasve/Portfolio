@@ -23,6 +23,7 @@ const projectData = [
 			<i class="devicon-react-original colored"></i>,
 			<i class="devicon-nodejs-plain colored"></i>,
 			<i class="devicon-bootstrap-plain colored"></i>,
+			<i class="devicon-heroku-plain colored"></i>,
 		],
 		description:
 			"Finesse tracks a user's personal financial statements and teaches financial literacy. It aims to demystify financial jargon so it is easy to understand. This application's concepts are based on Robert Kiyosaki's \"Increase Your Financial IQ,\" with additional features implemented.",
@@ -41,6 +42,7 @@ const projectData = [
 			<i class="devicon-react-original colored"></i>,
 			<i class="devicon-nodejs-plain colored"></i>,
 			<i class="devicon-materialui-plain colored"></i>,
+			<i class="devicon-heroku-plain colored"></i>,
 		],
 		description:
 			"Bits provides a system for users to successfully build and sustain lifelong habits. This application's concepts are based on James Clear's \"Atomic Habits\".",
@@ -58,7 +60,14 @@ const projectData = [
 			<i class="devicon-express-original"></i>,
 			<i class="devicon-nodejs-plain colored"></i>,
 			<i class="devicon-html5-plain colored"></i>,
-			<i class="devicon-css3-plain colored"></i>,
+			<img
+				src="./materializecss.svg"
+				width="30"
+				height="30"
+				alt="MaterializeCSS"
+			/>,
+			// <i class="devicon-css3-plain colored"></i>,
+			<i class="devicon-heroku-plain colored"></i>,
 		],
 		description:
 			"Slash Trash is a platform for users to search for eco-friendly alternatives to everyday household items and start their journey to a low-waste lifestyle.",
@@ -75,7 +84,14 @@ const projectData = [
 			<i class="devicon-postgresql-plain colored"></i>,
 			<img src="./Python.svg" width="25" height="25" alt="Python" />,
 			<i class="devicon-django-plain"></i>,
-			<i class="devicon-css3-plain colored"></i>,
+			// <i class="devicon-css3-plain colored"></i>,
+			<img
+				src="./materializecss.svg"
+				width="30"
+				height="30"
+				alt="MaterializeCSS"
+			/>,
+			<i class="devicon-heroku-plain colored"></i>,
 		],
 		description:
 			"Swapify is a collaborative project built by five developers. Shoes and clothing posted by the same user can be recommended to be styled together to form an outfit. Its purpose is to prevent fast fashion from being sent to landfills and instead promote the second-hand market.",
@@ -91,6 +107,7 @@ const projectData = [
 		technologies: [
 			<i class="devicon-react-original colored"></i>,
 			<i class="devicon-bootstrap-plain colored"></i>,
+			<img src="./Netlify.svg" width="25" height="25" alt="Netlify" />,
 		],
 		description:
 			"Shoppies allows users to search for movies from the OMDB API and nominate up to 5 of their favourite movies.",
@@ -112,6 +129,7 @@ const projectData = [
 				width="25"
 				height="25"
 			/>,
+			<img src="./Netlify.svg" width="25" height="25" alt="Netlify" />,
 		],
 		description:
 			'This application shares the main concepts of the ten scrolls from the book called "The Greatest Salesman in the World" by Og Mandino. It uses GSAP (GreenSock Animation Platform) for the scrolling animation.',

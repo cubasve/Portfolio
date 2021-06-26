@@ -129,6 +129,9 @@ export default function Intro() {
 						</span>
 					</h2>
 					<h3>Full-Stack Web Developer</h3>
+					{/* <h4 style={{ color: "tan" }}>
+						Building Transformative Applications With Purpose
+					</h4> */}
 				</div>
 			</div>
 		</div>
