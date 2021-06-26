@@ -44,7 +44,8 @@ My portfolio website that showcases my projects.
 ## Next Steps
 
 - Redesign navbar for tablet and mobile screens
-- Add more social accounts: Medium, AngelList, etc. and resume too!
+- Redesign intro page
+- Add more social accounts: Medium, AngelList, and resume too!
 - Do and add more projects!
 - Add more content for 'About Me' section
 - New skills sections:
