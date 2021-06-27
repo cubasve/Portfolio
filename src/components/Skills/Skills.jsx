@@ -9,6 +9,7 @@ import {
 	Zoom,
 } from "@material-ui/core";
 import "./Skills.css";
+import { BackupSharp } from "@material-ui/icons";
 
 const useStyles = makeStyles({
 	card: {
@@ -56,6 +57,9 @@ const mongoDB = <i class="devicon-mongodb-plain colored"></i>;
 //TOOLS
 const git = <i class="devicon-git-plain colored"></i>;
 const npm = <i class="devicon-npm-original-wordmark colored"></i>;
+const bash = <i class="devicon-bash-plain colored"></i>;
+const jest = <i class="devicon-jest-plain colored"></i>;
+const vsCode = <i class="devicon-vscode-plain colored"></i>;
 
 //STYLING
 const css = <i class="devicon-css3-plain colored"></i>;
@@ -172,9 +176,9 @@ export default function Skills() {
 									{git}
 								</IconButton>
 							</LightTooltip>
-							<LightTooltip title="GitHub" TransitionComponent={Zoom}>
-								<IconButton aria-label="GitHub" className={classes.skill}>
-									{gitHub}
+							<LightTooltip title="Bash" TransitionComponent={Zoom}>
+								<IconButton aria-label="Bash" className={classes.skill}>
+									{bash}
 								</IconButton>
 							</LightTooltip>
 							<LightTooltip
@@ -188,19 +192,14 @@ export default function Skills() {
 									{npm}
 								</IconButton>
 							</LightTooltip>
-							<LightTooltip title="Heroku" TransitionComponent={Zoom}>
-								<IconButton aria-label="Heroku" className={classes.skill}>
-									{heroku}
+							<LightTooltip title="Jest" TransitionComponent={Zoom}>
+								<IconButton aria-label="Jest" className={classes.skill}>
+									{jest}
 								</IconButton>
 							</LightTooltip>
-							<LightTooltip title="Netlify" TransitionComponent={Zoom}>
-								<IconButton aria-label="Netlify" className={classes.skill}>
-									<img
-										src="./Netlify.svg"
-										width="45"
-										height="45"
-										alt="Netlify"
-									/>
+							<LightTooltip title="VS Code" TransitionComponent={Zoom}>
+								<IconButton aria-label="VS Code" className={classes.skill}>
+									{vsCode}
 								</IconButton>
 							</LightTooltip>
 						</Typography>

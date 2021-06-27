@@ -22,10 +22,10 @@
 	}
 }
 
-@media only screen and (min-width: 601px) and (max-width: 1149) {
+/* @media only screen and (min-width: 601px) and (max-width: 1149) {
 	.Skills {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		justify-content: space-evenly;
 	}
-}
+} */
