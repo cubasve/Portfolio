@@ -41,13 +41,13 @@ const useStyles = makeStyles({
 const html = <i class="devicon-html5-plain colored"></i>;
 const bootstrap = <i class="devicon-bootstrap-plain colored"></i>;
 const javascript = <i class="devicon-javascript-plain colored"></i>;
+const typescript = <i class="devicon-typescript-plain colored"></i>;
 const react = <i class="devicon-react-original colored"></i>;
 const redux = <i class="devicon-redux-original colored"></i>;
 //const jQuery = <i class="devicon-jquery-plain colored"></i>;
 
 //BACKEND
 const postgresql = <i class="devicon-postgresql-plain colored"></i>;
-const npm = <i class="devicon-npm-original-wordmark colored"></i>;
 const django = <i class="devicon-django-plain colored"></i>;
 const express = <i class="devicon-express-original colored"></i>;
 const node = <i class="devicon-nodejs-plain colored"></i>;
@@ -55,13 +55,17 @@ const mongoDB = <i class="devicon-mongodb-plain colored"></i>;
 
 //TOOLS
 const git = <i class="devicon-git-plain colored"></i>;
-const gitHub = <i class="devicon-github-plain colored"></i>;
-const heroku = <i class="devicon-heroku-plain colored"></i>;
+const npm = <i class="devicon-npm-original-wordmark colored"></i>;
 
 //STYLING
 const css = <i class="devicon-css3-plain colored"></i>;
 const materialUI = <i class="devicon-materialui-plain colored"></i>;
 const sass = <i class="devicon-sass-original colored"></i>;
+
+//HOSTING PLATFORMS
+const aws = <i class="devicon-amazonwebservices-original colored"></i>;
+const gitHub = <i class="devicon-github-plain colored"></i>;
+const heroku = <i class="devicon-heroku-plain colored"></i>;
 
 const LightTooltip = withStyles((theme) => ({
 	tooltip: {
@@ -91,14 +95,14 @@ export default function Skills() {
 									{html}
 								</IconButton>
 							</LightTooltip>
-							<LightTooltip title="CSS" TransitionComponent={Zoom}>
-								<IconButton aria-label="CSS" className={classes.skill}>
-									{css}
-								</IconButton>
-							</LightTooltip>
 							<LightTooltip title="JavaScript" TransitionComponent={Zoom}>
 								<IconButton aria-label="JavaScript" className={classes.skill}>
 									{javascript}
+								</IconButton>
+							</LightTooltip>
+							<LightTooltip title="TypeScript" TransitionComponent={Zoom}>
+								<IconButton aria-label="TypeScript" className={classes.skill}>
+									{typescript}
 								</IconButton>
 							</LightTooltip>
 							<LightTooltip title="React" TransitionComponent={Zoom}>
@@ -240,6 +244,52 @@ export default function Skills() {
 							<LightTooltip title="Material-UI" TransitionComponent={Zoom}>
 								<IconButton aria-label="Material-UI" className={classes.skill}>
 									{materialUI}
+								</IconButton>
+							</LightTooltip>
+						</Typography>
+					</CardContent>
+				</Card>
+
+				<Card className={classes.card}>
+					<CardContent>
+						<Typography variant="h5" className={classes.category}>
+							HOSTING PLATFORMS
+						</Typography>
+						<Typography>
+							<LightTooltip title="GitHub" TransitionComponent={Zoom}>
+								<IconButton aria-label="GitHub" className={classes.skill}>
+									{gitHub}
+								</IconButton>
+							</LightTooltip>
+							<LightTooltip title="Heroku" TransitionComponent={Zoom}>
+								<IconButton aria-label="Heroku" className={classes.skill}>
+									{heroku}
+								</IconButton>
+							</LightTooltip>
+							<LightTooltip
+								title="Amazon Web Services"
+								TransitionComponent={Zoom}
+							>
+								<IconButton
+									aria-label="Amazon Web Services"
+									className={classes.skill}
+								>
+									{aws}
+								</IconButton>
+							</LightTooltip>
+							<LightTooltip title="Netlify" TransitionComponent={Zoom}>
+								<IconButton aria-label="Netlify" className={classes.skill}>
+									<img
+										src="./Netlify.svg"
+										width="45"
+										height="45"
+										alt="Netlify"
+									/>
+								</IconButton>
+							</LightTooltip>
+							<LightTooltip title="Azure" TransitionComponent={Zoom}>
+								<IconButton aria-label="Azure" className={classes.skill}>
+									<img src="./azure.svg" width="45" height="45" alt="Azure" />
 								</IconButton>
 							</LightTooltip>
 						</Typography>
