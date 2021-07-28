@@ -9,7 +9,6 @@ import {
 	Zoom,
 } from "@material-ui/core";
 import "./Skills.css";
-import { BackupSharp } from "@material-ui/icons";
 
 const useStyles = makeStyles({
 	card: {
