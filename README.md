@@ -50,8 +50,11 @@ My portfolio website that showcases my projects.
 - Add more content for 'About Me' section
 - New skills sections:
   - Front-end: HTML, JavaScript, TypeScript, React, Redux, jQuery
-  - Back-end: Express, Node, Python, Django, MongoDB, PostgreSQL
-  - Tools: Git, Jest, npm, Bash, etc.
+  - Back-end: Express, Node, Python, Django, GraphQL
+  - Databases & Tools: MongoDB, PostgreSQL, Git, Jest, npm, Bash, etc.
   - Styling: CSS, Sass, Bootstrap, Material-UI, Materialize CSS, Tailwind CSS
   - Hosting platforms: Heroku, Netlify, GitHub Pages, AWS, Azure
-  - Other: Figma, Trello, Jira, etc.
+  - Other: Figma, Trello, Jira, Asana, etc.
+- Add light and dark modes
+- Add 'Scroll to Top' button
+- Create a background shadow when user hovers/clicks over Project and Skills cards
