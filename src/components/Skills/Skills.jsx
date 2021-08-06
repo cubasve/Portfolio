@@ -1,4 +1,5 @@
 import React from "react";
+import skillData from "./skillData.js";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import {
 	Card,
@@ -93,31 +94,20 @@ export default function Skills() {
 						</Typography>
 						{/* <Typography variant="h3" className={classes.icon}>{html} {css} {javascript} {react} {jQuery}</Typography> */}
 						<Typography>
-							<LightTooltip title="HTML" TransitionComponent={Zoom}>
-								<IconButton aria-label="HTML" className={classes.skill}>
-									{html}
-								</IconButton>
-							</LightTooltip>
-							<LightTooltip title="JavaScript" TransitionComponent={Zoom}>
-								<IconButton aria-label="JavaScript" className={classes.skill}>
-									{javascript}
-								</IconButton>
-							</LightTooltip>
-							<LightTooltip title="TypeScript" TransitionComponent={Zoom}>
-								<IconButton aria-label="TypeScript" className={classes.skill}>
-									{typescript}
-								</IconButton>
-							</LightTooltip>
-							<LightTooltip title="React" TransitionComponent={Zoom}>
-								<IconButton aria-label="React" className={classes.skill}>
-									{react}
-								</IconButton>
-							</LightTooltip>
-							<LightTooltip title="Redux" TransitionComponent={Zoom}>
-								<IconButton aria-label="Redux" className={classes.skill}>
-									{redux}
-								</IconButton>
-							</LightTooltip>
+							{skillData
+								.filter((skill) => skill.category === "Front")
+								.map((skill) => {
+									return (
+										<LightTooltip title={skill.name} TransitionComponent={Zoom}>
+											<IconButton
+												aria-label={skill.name}
+												className={classes.skill}
+											>
+												{skill.icon}
+											</IconButton>
+										</LightTooltip>
+									);
+								})}
 						</Typography>
 					</CardContent>
 				</Card>
