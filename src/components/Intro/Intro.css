@@ -17,9 +17,21 @@
 }
 
 .title {
-	color: tan;
+	color: #f5f5dc;
 }
 
 .with-purpose {
-	color: #dcc6aa;
+	color: #f2f3f4;
 }
+
+.Contact-Icons {
+	padding-bottom: 50px;
+}
+
+@media only screen and (max-width: 650px) {
+	.IntroduceYourself {
+		margin: 0px 35px;
+	}
+}	
+
+

@@ -36,6 +36,7 @@ My portfolio website that showcases my projects.
 - React Scrollspy
 - React Typing Effect
 - React-Flippy
+- Dev Icons: https://devicon.dev/ and https://iconify.design/
 
 ## Getting Started
 
@@ -49,12 +50,12 @@ My portfolio website that showcases my projects.
 - Do and add more projects!
 - Add more content for 'About Me' section
 - New skills sections:
-  - Front-end: HTML, JavaScript, TypeScript, React, Redux, jQuery
+  - Front-end: HTML, JavaScript, TypeScript, React, Redux, jQuery, Apollo, Gatsby
   - Back-end: Express, Node, Python, Django, GraphQL
-  - Databases & Tools: MongoDB, PostgreSQL, Git, Jest, npm, Bash, etc.
+  - Databases & Testing: MongoDB, PostgreSQL, Jest, React Testing Library, etc.
   - Styling: CSS, Sass, Bootstrap, Material-UI, Materialize CSS, Tailwind CSS
   - Hosting platforms: Heroku, Netlify, GitHub Pages, AWS, Azure
-  - Other: Figma, Trello, Jira, Asana, etc.
+  - Tools: Git, Figma, Trello, Jira, Asana, npm, Bash, etc.
 - Add light and dark modes
 - Add 'Scroll to Top' button
 - Create a background shadow when user hovers/clicks over Project and Skills cards

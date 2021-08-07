@@ -5,11 +5,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faLinkedin,
 	faGithub,
-	faMedium /*faAngellist*/,
+	faMedium,
 } from "@fortawesome/free-brands-svg-icons";
 import {
 	faEnvelope,
-	faMapMarkerAlt,
 	faTerminal /*faAddressCard, faIdBadge, faAddressBook*/,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link, Typography, Tooltip, Zoom } from "@material-ui/core";
@@ -112,10 +111,6 @@ export default function Intro() {
 
 			<div className="IntroduceYourself">
 				<div className="Eva">
-					<h4>
-						<FontAwesomeIcon icon={faMapMarkerAlt} /> Toronto, Ontario
-					</h4>
-					<br />
 					<h2>
 						<FontAwesomeIcon icon={faTerminal} />
 						<span id="name">
