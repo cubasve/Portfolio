@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import {
 	AppBar,
-	Button,
 	CssBaseline,
+	Divider,
 	Drawer,
 	Fab,
 	Hidden,
@@ -13,7 +13,6 @@ import {
 	ListItem,
 	ListItemIcon,
 	ListItemText,
-	Slide,
 	Toolbar,
 	Typography,
 	useScrollTrigger,
@@ -28,39 +27,37 @@ import PropTypes from "prop-types";
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
-	link: {
-		color: "white",
-		fontSize: "19px",
-		margin: 15,
-		// textAlign: 'center',
-	},
 	root: {
+		display: "flex",
 		position: "fixed",
 		bottom: theme.spacing(2),
 		right: theme.spacing(2),
 		zIndex: 1,
 		fontWeight: 200,
-		display: "flex",
 	},
 	drawer: {
-		[theme.breakpoints.up("sm")]: {
+		[theme.breakpoints.up("md")]: {
 			width: drawerWidth,
 			flexShrink: 0,
 		},
 	},
-	appBar: {
-		[theme.breakpoints.up("sm")]: {
-			width: `calc(100% - ${drawerWidth}px)`,
-			marginLeft: drawerWidth,
-		},
-	},
-	toolbar: theme.mixins.toolbar,
 	menuButton: {
 		marginRight: theme.spacing(2),
-		[theme.breakpoints.up("sm")]: {
+		[theme.breakpoints.up("md")]: {
 			display: "none",
 		},
 	},
+	link: {
+		marginRight: theme.spacing(2),
+		[theme.breakpoints.down("sm")]: {
+			display: "none",
+		},
+		color: "white",
+		fontSize: "19px",
+		margin: 15,
+	},
+	// necessary for content to be below app bar
+	toolbar: theme.mixins.toolbar,
 	drawerPaper: {
 		width: drawerWidth,
 	},
@@ -103,70 +100,52 @@ ScrollTop.propTypes = {
 };
 
 Navbar.propTypes = {
-	/**
-	 * Injected by the documentation to work in an iframe.
-	 * You won't need it on your project.
-	 */
 	window: PropTypes.func,
 };
 
 export default function Navbar(props) {
+	const { window } = props;
 	const classes = useStyles();
 	const theme = useTheme();
-
-	const { window } = props;
 	const [mobileOpen, setMobileOpen] = useState(false);
 
 	const handleDrawerToggle = () => {
-		setMobileOpen(mobileOpen);
+		setMobileOpen(!mobileOpen);
 	};
 
 	const drawer = (
-		<List>
-			{["Intro", "About", "Projects", "Skills"].map((text) => (
-				<ListItem button key={text}>
-					<ListItemIcon>
-						<Mail />
-					</ListItemIcon>
-					<ListItemText primary={text} />
-				</ListItem>
-			))}
-		</List>
+		<div>
+			<div className={classes.toolbar} />
+			<Divider />
+			<List>
+				{["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
+					<ListItem button key={text}>
+						<ListItemIcon>
+							<Mail />
+						</ListItemIcon>
+						<ListItemText primary={text} />
+					</ListItem>
+				))}
+			</List>
+			<Divider />
+			<List>
+				{["All mail", "Trash", "Spam"].map((text, index) => (
+					<ListItem button key={text}>
+						<ListItemIcon>
+							<Mail />
+						</ListItemIcon>
+						<ListItemText primary={text} />
+					</ListItem>
+				))}
+			</List>
+		</div>
 	);
 
 	const container =
 		window !== undefined ? () => window().document.body : undefined;
 
-	let desktopMenu = (
-		<AppBar position="fixed">
-			<Scrollspy
-				items={["intro", "about", "projects", "skills", "contact"]}
-				currentClassName="is-current"
-				offset={0}
-			>
-				<Link href="#intro" className={classes.link} id="nav-links">
-					{/* <FontAwesomeIcon icon={faHome} /> */}
-					Home
-				</Link>
-				<Link href="#about" className={classes.link}>
-					{/* <FontAwesomeIcon icon={faUser} /> */}
-					About
-				</Link>
-				<Link href="#projects" className={classes.link}>
-					{/* <FontAwesomeIcon icon={faBriefcase} /> */}
-					Projects
-				</Link>
-				<Link href="#skills" className={classes.link}>
-					{/* <FontAwesomeIcon icon={faLaptopCode} /> */}
-					Skills
-				</Link>
-				{/* <Link href="#contact" className={classes.link}><FontAwesomeIcon icon={faPhoneAlt} /> Contact</Link> */}
-			</Scrollspy>
-		</AppBar>
-	);
-
 	return (
-		<>
+		<div className={classes.root}>
 			<CssBaseline />
 			<AppBar position="fixed" className={classes.appBar}>
 				<Toolbar>
@@ -179,63 +158,50 @@ export default function Navbar(props) {
 					>
 						<Menu />
 					</IconButton>
-					{/* <Typography variant="h6" noWrap>
-						Eva CV
-					</Typography> */}
-				</Toolbar>
-			</AppBar>
-
-			<nav className={classes.drawer} aria-label="mailbox folders">
-				{/* The implementation can be swapped with js to avoid SEO duplication of links. */}
-				<Hidden only={["lg", "xl"]} implementation="css">
-					<Drawer
-						container={container}
-						variant="temporary"
-						anchor={theme.direction === "rtl" ? "right" : "left"}
-						open={mobileOpen}
-						onClose={handleDrawerToggle}
-						classes={{
-							paper: classes.drawerPaper,
-						}}
-						ModalProps={{
-							keepMounted: true, // Better open performance on mobile.
-						}}
-					>
-						{drawer}
-					</Drawer>
-				</Hidden>
-				<Hidden only={["xs", "sm", "md"]} implementation="css">
+					<Typography variant="h6" noWrap className={classes.menuButton}>
+						Mobile
+					</Typography>
 					<Scrollspy
 						items={["intro", "about", "projects", "skills", "contact"]}
 						currentClassName="is-current"
 						offset={0}
 					>
 						<Link href="#intro" className={classes.link} id="nav-links">
-							{/* <FontAwesomeIcon icon={faHome} /> */}
 							Home
 						</Link>
 						<Link href="#about" className={classes.link}>
-							{/* <FontAwesomeIcon icon={faUser} /> */}
 							About
 						</Link>
 						<Link href="#projects" className={classes.link}>
-							{/* <FontAwesomeIcon icon={faBriefcase} /> */}
 							Projects
 						</Link>
 						<Link href="#skills" className={classes.link}>
-							{/* <FontAwesomeIcon icon={faLaptopCode} /> */}
 							Skills
 						</Link>
-						{/* <Link href="#contact" className={classes.link}><FontAwesomeIcon icon={faPhoneAlt} /> Contact</Link> */}
 					</Scrollspy>
-				</Hidden>
-			</nav>
+				</Toolbar>
+			</AppBar>
+			<Drawer
+				container={container}
+				variant="temporary"
+				anchor={theme.direction === "rtl" ? "right" : "left"}
+				open={mobileOpen}
+				onClose={handleDrawerToggle}
+				classes={{
+					paper: classes.drawerPaper,
+				}}
+				ModalProps={{
+					keepMounted: true, // Better open performance on mobile.
+				}}
+			>
+				{drawer}
+			</Drawer>
 			<Toolbar id="back-to-top-anchor" />
 			<ScrollTop {...props}>
 				<Fab size="small" aria-label="scroll back to top" color="primary">
 					<KeyboardArrowUp />
 				</Fab>
 			</ScrollTop>
-		</>
+		</div>
 	);
 }
