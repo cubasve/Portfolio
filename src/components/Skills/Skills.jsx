@@ -64,7 +64,7 @@ export default function Skills() {
 								.filter((skill) => skill.category === "Front")
 								.map((skill) => {
 									return (
-										<LightTooltip title={skill.name} TransitionComponent={Zoom}>
+										<LightTooltip title={skill.name} key={skill.name} TransitionComponent={Zoom}>
 											<IconButton
 												aria-label={skill.name}
 												className={classes.skill}
@@ -87,7 +87,7 @@ export default function Skills() {
 								.filter((skill) => skill.category === "Back")
 								.map((skill) => {
 									return (
-										<LightTooltip title={skill.name} TransitionComponent={Zoom}>
+										<LightTooltip title={skill.name} key={skill.name} TransitionComponent={Zoom}>
 											<IconButton
 												aria-label={skill.name}
 												className={classes.skill}
@@ -110,7 +110,7 @@ export default function Skills() {
 								.filter((skill) => skill.category === "Tools")
 								.map((skill) => {
 									return (
-										<LightTooltip title={skill.name} TransitionComponent={Zoom}>
+										<LightTooltip title={skill.name} key={skill.name} TransitionComponent={Zoom}>
 											<IconButton
 												aria-label={skill.name}
 												className={classes.skill}
@@ -133,7 +133,7 @@ export default function Skills() {
 								.filter((skill) => skill.category === "Styling")
 								.map((skill) => {
 									return (
-										<LightTooltip title={skill.name} TransitionComponent={Zoom}>
+										<LightTooltip title={skill.name} key={skill.name} TransitionComponent={Zoom}>
 											<IconButton
 												aria-label={skill.name}
 												className={classes.skill}
@@ -156,7 +156,7 @@ export default function Skills() {
 								.filter((skill) => skill.category === "Deploy")
 								.map((skill) => {
 									return (
-										<LightTooltip title={skill.name} TransitionComponent={Zoom}>
+										<LightTooltip title={skill.name} key={skill.name} TransitionComponent={Zoom}>
 											<IconButton
 												aria-label={skill.name}
 												className={classes.skill}

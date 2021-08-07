@@ -24,6 +24,7 @@ const useStyles = makeStyles({
 		width: 270, //width: 280 - need to change css grid
 		height: 440,
 		// margin: 0,
+
 	},
 	cardHeader: {},
 	avatar: {},
