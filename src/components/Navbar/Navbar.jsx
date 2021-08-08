@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
 		},
 		color: "white",
 		fontSize: "19px",
-		margin: 15,
+		margin: theme.spacing(5),
 	},
 	toolbar: theme.mixins.toolbar,
 	drawerPaper: {
@@ -70,6 +70,10 @@ const useStyles = makeStyles((theme) => ({
 		padding: theme.spacing(3),
 	},
 	name: {
+		textAlign: "center",
+	},
+	desktop: {
+		flexGrow: 1,
 		textAlign: "center",
 	},
 }));
@@ -127,7 +131,7 @@ export default function Navbar(props) {
 	const drawer = (
 		<div>
 			<div className={classes.toolbar}></div>
-			<h3 className={classes.name}>Eva CV</h3>
+			<h3 className={classes.name}>Eva Cubas Vasquez</h3>
 			<Divider />
 
 			<Scrollspy
@@ -171,6 +175,48 @@ export default function Navbar(props) {
 		</div>
 	);
 
+	const mobileMenu = (
+		<>
+			<IconButton
+				color="inherit"
+				aria-label="open drawer"
+				edge="start"
+				onClick={handleDrawerToggle}
+				className={classes.menuButton}
+			>
+				<Menu />
+			</IconButton>
+			<Typography variant="h6" noWrap className={classes.menuButton}>
+				Eva Cubas Vasquez
+			</Typography>
+		</>
+	);
+
+	const desktopMenu = (
+		<Scrollspy
+			items={["intro", "about", "projects", "skills", "contact"]}
+			currentClassName="is-current"
+			offset={0}
+			className={classes.desktop}
+		>
+			<Link href="#intro" className={classes.link} id="nav-links">
+				Home
+			</Link>
+			<Link href="#about" className={classes.link}>
+				About
+			</Link>
+			<Link href="#projects" className={classes.link}>
+				Projects
+			</Link>
+			<Link href="#skills" className={classes.link}>
+				Skills
+			</Link>
+			<Link href="#contact" className={classes.link}>
+				Contact
+			</Link>
+		</Scrollspy>
+	);
+
 	const container =
 		window !== undefined ? () => window().document.body : undefined;
 
@@ -179,38 +225,8 @@ export default function Navbar(props) {
 			<CssBaseline />
 			<AppBar position="fixed">
 				<Toolbar>
-					<IconButton
-						color="inherit"
-						aria-label="open drawer"
-						edge="start"
-						onClick={handleDrawerToggle}
-						className={classes.menuButton}
-					>
-						<Menu />
-					</IconButton>
-					<Typography variant="h6" noWrap className={classes.menuButton}>
-						Eva Cubas Vasquez
-					</Typography>
-
-					<Scrollspy
-						items={["intro", "about", "projects", "skills", "contact"]}
-						currentClassName="is-current"
-						offset={0}
-						className={classes.name}
-					>
-						<Link href="#intro" className={classes.link} id="nav-links">
-							Home
-						</Link>
-						<Link href="#about" className={classes.link} id="nav-links">
-							About
-						</Link>
-						<Link href="#projects" className={classes.link} id="nav-links">
-							Projects
-						</Link>
-						<Link href="#skills" className={classes.link} id="nav-links">
-							Skills
-						</Link>
-					</Scrollspy>
+					{mobileMenu}
+					{desktopMenu}
 				</Toolbar>
 			</AppBar>
 			<Drawer
