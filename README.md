@@ -44,11 +44,11 @@ My portfolio website that showcases my projects.
 
 ## Next Steps
 
-- Redesign navbar for tablet and mobile screens
+- ~~Redesign navbar for tablet and mobile screens~~
 - Redesign intro page
 - Add more social accounts: Medium, AngelList, and resume too!
 - Do and add more projects!
-- Add more content for 'About Me' section
+- ~~Add more content for 'About Me' section~~
 - New skills sections:
   - Front-end: HTML, JavaScript, TypeScript, React, Redux, jQuery, Apollo, Gatsby
   - Back-end: Express, Node, Python, Django, GraphQL
@@ -57,5 +57,5 @@ My portfolio website that showcases my projects.
   - Hosting platforms: Heroku, Netlify, GitHub Pages, AWS, Azure
   - Tools: Git, Figma, Trello, Jira, Asana, npm, Bash, etc.
 - Add light and dark modes
-- Add 'Scroll to Top' button
+- ~~Add 'Scroll to Top' button~~
 - Create a background shadow when user hovers/clicks over Project and Skills cards

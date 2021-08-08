@@ -6,7 +6,6 @@ import {
 	Divider,
 	Drawer,
 	Fab,
-	Hidden,
 	IconButton,
 	Link,
 	List,
@@ -18,11 +17,18 @@ import {
 	useScrollTrigger,
 	Zoom,
 } from "@material-ui/core";
-import { KeyboardArrowUp, Mail, Menu } from "@material-ui/icons";
+import {
+	AccountCircle,
+	Code,
+	KeyboardArrowUp,
+	Home,
+	Phone,
+	Menu,
+	Work,
+} from "@material-ui/icons";
 import Scrollspy from "react-scrollspy";
 import PropTypes from "prop-types";
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faHome, faUser, faBriefcase, faLaptopCode, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
+import "./Navbar.css";
 
 const drawerWidth = 240;
 
@@ -48,7 +54,6 @@ const useStyles = makeStyles((theme) => ({
 		},
 	},
 	link: {
-		marginRight: theme.spacing(2),
 		[theme.breakpoints.down("sm")]: {
 			display: "none",
 		},
@@ -56,7 +61,6 @@ const useStyles = makeStyles((theme) => ({
 		fontSize: "19px",
 		margin: 15,
 	},
-	// necessary for content to be below app bar
 	toolbar: theme.mixins.toolbar,
 	drawerPaper: {
 		width: drawerWidth,
@@ -64,6 +68,9 @@ const useStyles = makeStyles((theme) => ({
 	content: {
 		flexGrow: 1,
 		padding: theme.spacing(3),
+	},
+	name: {
+		textAlign: "center",
 	},
 }));
 
@@ -103,6 +110,10 @@ Navbar.propTypes = {
 	window: PropTypes.func,
 };
 
+function ListItemLink(props) {
+	return <ListItem button component="a" {...props} />;
+}
+
 export default function Navbar(props) {
 	const { window } = props;
 	const classes = useStyles();
@@ -115,29 +126,48 @@ export default function Navbar(props) {
 
 	const drawer = (
 		<div>
-			<div className={classes.toolbar} />
+			<div className={classes.toolbar}></div>
+			<h3 className={classes.name}>Eva CV</h3>
 			<Divider />
-			<List>
-				{["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-					<ListItem button key={text}>
+
+			<Scrollspy
+				items={["intro", "about", "projects", "skills", "contact"]}
+				currentClassName="is-current"
+				offset={0}
+			>
+				<List component="nav">
+					<ListItemLink href="#intro">
 						<ListItemIcon>
-							<Mail />
+							<Home color="primary" />
 						</ListItemIcon>
-						<ListItemText primary={text} />
-					</ListItem>
-				))}
-			</List>
-			<Divider />
-			<List>
-				{["All mail", "Trash", "Spam"].map((text, index) => (
-					<ListItem button key={text}>
+						<ListItemText primary="Intro" />
+					</ListItemLink>
+					<ListItemLink href="#about">
 						<ListItemIcon>
-							<Mail />
+							<AccountCircle color="primary" />
 						</ListItemIcon>
-						<ListItemText primary={text} />
-					</ListItem>
-				))}
-			</List>
+						<ListItemText primary="About" />
+					</ListItemLink>
+					<ListItemLink href="#projects">
+						<ListItemIcon>
+							<Work color="primary" />
+						</ListItemIcon>
+						<ListItemText primary="Projects" />
+					</ListItemLink>
+					<ListItemLink href="#skills">
+						<ListItemIcon>
+							<Code color="primary" />
+						</ListItemIcon>
+						<ListItemText primary="Skills" />
+					</ListItemLink>
+					<ListItemLink href="#contact">
+						<ListItemIcon>
+							<Phone color="primary" />
+						</ListItemIcon>
+						<ListItemText primary="Contact" />
+					</ListItemLink>
+				</List>
+			</Scrollspy>
 		</div>
 	);
 
@@ -145,9 +175,9 @@ export default function Navbar(props) {
 		window !== undefined ? () => window().document.body : undefined;
 
 	return (
-		<div className={classes.root}>
+		<>
 			<CssBaseline />
-			<AppBar position="fixed" className={classes.appBar}>
+			<AppBar position="fixed">
 				<Toolbar>
 					<IconButton
 						color="inherit"
@@ -159,23 +189,25 @@ export default function Navbar(props) {
 						<Menu />
 					</IconButton>
 					<Typography variant="h6" noWrap className={classes.menuButton}>
-						Mobile
+						Eva Cubas Vasquez
 					</Typography>
+
 					<Scrollspy
 						items={["intro", "about", "projects", "skills", "contact"]}
 						currentClassName="is-current"
 						offset={0}
+						className={classes.name}
 					>
 						<Link href="#intro" className={classes.link} id="nav-links">
 							Home
 						</Link>
-						<Link href="#about" className={classes.link}>
+						<Link href="#about" className={classes.link} id="nav-links">
 							About
 						</Link>
-						<Link href="#projects" className={classes.link}>
+						<Link href="#projects" className={classes.link} id="nav-links">
 							Projects
 						</Link>
-						<Link href="#skills" className={classes.link}>
+						<Link href="#skills" className={classes.link} id="nav-links">
 							Skills
 						</Link>
 					</Scrollspy>
@@ -202,6 +234,6 @@ export default function Navbar(props) {
 					<KeyboardArrowUp />
 				</Fab>
 			</ScrollTop>
-		</div>
+		</>
 	);
 }
