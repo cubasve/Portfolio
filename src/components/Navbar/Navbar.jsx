@@ -2,7 +2,6 @@ import React, { useContext, useState } from "react";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import {
 	AppBar,
-	Button,
 	CssBaseline,
 	Divider,
 	Drawer,
@@ -20,6 +19,8 @@ import {
 } from "@material-ui/core";
 import {
 	AccountCircle,
+	Brightness2,
+	Brightness5,
 	Code,
 	KeyboardArrowUp,
 	Home,
@@ -31,9 +32,6 @@ import Scrollspy from "react-scrollspy";
 import PropTypes from "prop-types";
 import "./Navbar.css";
 import { ModeContext } from "../../context/ModeContext";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSun } from "@fortawesome/free-solid-svg-icons";
 
 const drawerWidth = 240;
 
@@ -127,7 +125,7 @@ export default function Navbar(props) {
 	const { window } = props;
 	const classes = useStyles();
 	const theme = useTheme();
-	const { theme, setTheme } = useContext(ThemeContext);
+	const { mode, toggleMode } = useContext(ModeContext);
 
 	const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -223,14 +221,13 @@ export default function Navbar(props) {
 					Contact
 				</Link>
 			</Scrollspy>
-			<Button
-			// onClick={setMode({
-			// 	setting: "light",
-			// 	icon: <FontAwesomeIcon icon={faSun} size="10px" />,
-			// })}
-			>
-				{mode.icon}
-			</Button>
+			<IconButton onClick={toggleMode}>
+				{mode ? (
+					<Brightness2 style={{ fontSize: 30 }} />
+				) : (
+					<Brightness5 style={{ fontSize: 30 }} />
+				)}
+			</IconButton>
 		</>
 	);
 

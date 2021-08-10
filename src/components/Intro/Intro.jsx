@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Intro.css";
 import ReactTypingEffect from "react-typing-effect";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,6 +13,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { Link, Typography, Tooltip, Zoom } from "@material-ui/core";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
+import { ModeContext } from "../../context/ModeContext";
 
 const useStyles = makeStyles({
 	icon: {
@@ -35,8 +36,10 @@ const LightTooltip = withStyles((theme) => ({
 
 export default function Intro() {
 	const classes = useStyles();
+	const { mode } = useContext(ModeContext);
+
 	return (
-		<div class="landing-page" id="intro">
+		<div class={"landing-page-" + (mode ? "dark" : "light")} id="intro">
 			<div className="Contact-Icons">
 				<Typography variant="h3" className="Contact">
 					<LightTooltip
@@ -123,7 +126,9 @@ export default function Intro() {
 							/>
 						</span>
 					</h2>
-					<h3 className="title">Full-Stack Web Developer</h3>
+					<h3 className={"title-" + (mode ? "dark" : "light")}>
+						Full-Stack Web Developer
+					</h3>
 					<h4 className="with-purpose">
 						Building Transformative Applications With Purpose
 					</h4>

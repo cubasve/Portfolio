@@ -1,18 +1,22 @@
 import React, { createContext, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon } from "@fortawesome/free-solid-svg-icons";
 
 export const ModeContext = createContext();
 
 export const ModeProvider = ({ children }) => {
-	const [mode, setMode] = useState({
-		setting: "dark",
-		icon: <FontAwesomeIcon icon={faMoon} size="15px" />,
-	});
+	// const [mode, setMode] = useState({
+	// 	setting: "dark",
+	// 	icon: <Brightness2 style={{ fontSize: 40 }} />,
+	// });
+
+	const [mode, setMode] = useState(true);
+
+	function toggleMode() {
+		setMode((prevMode) => !prevMode);
+	}
 
 	const context = {
 		mode,
-		setMode,
+		toggleMode,
 	};
 
 	return (

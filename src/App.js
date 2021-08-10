@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import Intro from "./components/Intro/Intro";
 import About from "./components/About/About";
@@ -7,20 +7,20 @@ import Proj from "./components/Proj/Proj";
 import Skills from "./components/Skills/Skills";
 import Contact from "./components/Contact/Contact";
 import "./App.css";
-import { ModeProvider } from "./context/ModeContext";
+import { ModeContext } from "./context/ModeContext";
 
 export default function App() {
+	const { mode } = useContext(ModeContext);
+
 	return (
-		<div className="App">
-			<ModeProvider>
-				<Navbar />
-				<Intro />
-				<About />
-				<Proj />
-				{/* <Projects /> */}
-				<Skills />
-				<Contact />
-			</ModeProvider>
+		<div className={"App-" + (mode ? "dark" : "light")}>
+			<Navbar />
+			<Intro />
+			<About />
+			<Proj />
+			{/* <Projects /> */}
+			<Skills />
+			<Contact />
 		</div>
 	);
 }
