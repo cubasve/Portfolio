@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import {
 	AppBar,
+	Button,
 	CssBaseline,
 	Divider,
 	Drawer,
@@ -29,6 +30,10 @@ import {
 import Scrollspy from "react-scrollspy";
 import PropTypes from "prop-types";
 import "./Navbar.css";
+import { ModeContext } from "../../context/ModeContext";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSun } from "@fortawesome/free-solid-svg-icons";
 
 const drawerWidth = 240;
 
@@ -122,6 +127,8 @@ export default function Navbar(props) {
 	const { window } = props;
 	const classes = useStyles();
 	const theme = useTheme();
+	const { theme, setTheme } = useContext(ThemeContext);
+
 	const [mobileOpen, setMobileOpen] = useState(false);
 
 	const handleDrawerToggle = () => {
@@ -193,28 +200,38 @@ export default function Navbar(props) {
 	);
 
 	const desktopMenu = (
-		<Scrollspy
-			items={["intro", "about", "projects", "skills", "contact"]}
-			currentClassName="is-current"
-			offset={0}
-			className={classes.desktop}
-		>
-			<Link href="#intro" className={classes.link} id="nav-links">
-				Home
-			</Link>
-			<Link href="#about" className={classes.link}>
-				About
-			</Link>
-			<Link href="#projects" className={classes.link}>
-				Projects
-			</Link>
-			<Link href="#skills" className={classes.link}>
-				Skills
-			</Link>
-			<Link href="#contact" className={classes.link}>
-				Contact
-			</Link>
-		</Scrollspy>
+		<>
+			<Scrollspy
+				items={["intro", "about", "projects", "skills", "contact"]}
+				currentClassName="is-current"
+				offset={0}
+				className={classes.desktop}
+			>
+				<Link href="#intro" className={classes.link} id="nav-links">
+					Home
+				</Link>
+				<Link href="#about" className={classes.link}>
+					About
+				</Link>
+				<Link href="#projects" className={classes.link}>
+					Projects
+				</Link>
+				<Link href="#skills" className={classes.link}>
+					Skills
+				</Link>
+				<Link href="#contact" className={classes.link}>
+					Contact
+				</Link>
+			</Scrollspy>
+			<Button
+			// onClick={setMode({
+			// 	setting: "light",
+			// 	icon: <FontAwesomeIcon icon={faSun} size="10px" />,
+			// })}
+			>
+				{mode.icon}
+			</Button>
+		</>
 	);
 
 	const container =

@@ -7,17 +7,20 @@ import Proj from "./components/Proj/Proj";
 import Skills from "./components/Skills/Skills";
 import Contact from "./components/Contact/Contact";
 import "./App.css";
+import { ModeProvider } from "./context/ModeContext";
 
 export default function App() {
 	return (
 		<div className="App">
-			<Navbar />
-			<Intro />
-			<About />
-			<Proj />
-			{/* <Projects /> */}
-			<Skills />
-			<Contact />
+			<ModeProvider>
+				<Navbar />
+				<Intro />
+				<About />
+				<Proj />
+				{/* <Projects /> */}
+				<Skills />
+				<Contact />
+			</ModeProvider>
 		</div>
 	);
 }
