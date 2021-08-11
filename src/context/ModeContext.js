@@ -11,11 +11,15 @@ export const ModeProvider = ({ children }) => {
 	const [mode, setMode] = useState(true);
 
 	function toggleMode() {
-		setMode((prevMode) => !prevMode);
+		setMode((prevMode) => {
+			localStorage.setItem("darkMode", JSON.stringify(!prevMode));
+			return !prevMode;
+		});
 	}
 
 	const context = {
 		mode,
+		setMode,
 		toggleMode,
 	};
 

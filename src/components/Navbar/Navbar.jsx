@@ -223,9 +223,9 @@ export default function Navbar(props) {
 			</Scrollspy>
 			<IconButton onClick={toggleMode}>
 				{mode ? (
-					<Brightness2 style={{ fontSize: 30 }} />
+					<Brightness2 style={{ fontSize: 30, color: "#00bfff" }} />
 				) : (
-					<Brightness5 style={{ fontSize: 30 }} />
+					<Brightness5 style={{ fontSize: 30, color: "#00bfff" }} />
 				)}
 			</IconButton>
 		</>

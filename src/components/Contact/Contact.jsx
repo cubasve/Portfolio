@@ -46,7 +46,7 @@ export default function Contact() {
 							href="mailto:cubasve@gmail.com"
 							color="inherit"
 						>
-							<FontAwesomeIcon icon={faEnvelope} size="10px" />
+							<FontAwesomeIcon icon={faEnvelope} />
 						</Link>
 					</LightTooltip>
 				</Typography>

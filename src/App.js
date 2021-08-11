@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import Intro from "./components/Intro/Intro";
 import About from "./components/About/About";
@@ -10,7 +10,14 @@ import "./App.css";
 import { ModeContext } from "./context/ModeContext";
 
 export default function App() {
-	const { mode } = useContext(ModeContext);
+	const { mode, setMode } = useContext(ModeContext);
+
+	useEffect(() => {
+		const localStorageMode = localStorage.getItem("darkMode");
+		if (localStorageMode !== null) {
+			setMode(localStorageMode);
+		}
+	}, [setMode]);
 
 	return (
 		<div className={"App-" + (mode ? "dark" : "light")}>

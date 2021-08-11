@@ -39,7 +39,7 @@ export default function Intro() {
 	const { mode } = useContext(ModeContext);
 
 	return (
-		<div class={"landing-page-" + (mode ? "dark" : "light")} id="intro">
+		<div className={"landing-page-" + (mode ? "dark" : "light")} id="intro">
 			<div className="Contact-Icons">
 				<Typography variant="h3" className="Contact">
 					<LightTooltip
@@ -52,7 +52,7 @@ export default function Intro() {
 							href="mailto:cubasve@gmail.com"
 							color="inherit"
 						>
-							<FontAwesomeIcon icon={faEnvelope} size="10px" />
+							<FontAwesomeIcon icon={faEnvelope} />
 						</Link>
 					</LightTooltip>
 				</Typography>

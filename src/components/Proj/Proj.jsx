@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import projectData from "../../data/projectData";
 import "./Proj.css";
 import Flippy, { FrontSide, BackSide } from "react-flippy";
