@@ -7,25 +7,35 @@ const skillData = [
 		category: "Front",
 	},
 	{
+		name: "CSS",
+		icon: <i class="devicon-css3-plain colored"></i>,
+		category: "Front",
+	},
+	{
 		name: "JavaScript",
 		icon: <i class="devicon-javascript-plain colored"></i>,
 		category: "Front",
 	},
-	{
-		name: "TypeScript",
-		icon: <i class="devicon-typescript-plain colored"></i>,
-		category: "Front",
-	},
+	// {
+	// 	name: "TypeScript",
+	// 	icon: <i class="devicon-typescript-plain colored"></i>,
+	// 	category: "Front",
+	// },
 	{
 		name: "React",
 		icon: <i class="devicon-react-original colored"></i>,
 		category: "Front",
 	},
 	{
-		name: "Redux",
-		icon: <i class="devicon-redux-original colored"></i>,
+		name: "Bootstrap",
+		icon: <i class="devicon-bootstrap-plain colored"></i>,
 		category: "Front",
 	},
+	// {
+	// 	name: "Redux",
+	// 	icon: <i class="devicon-redux-original colored"></i>,
+	// 	category: "Front",
+	// },
 	{
 		name: "Express",
 		icon: <i class="devicon-express-original colored"></i>,
@@ -62,25 +72,40 @@ const skillData = [
 		category: "Tools",
 	},
 	{
-		name: "Bash",
-		icon: <i class="devicon-bash-plain colored"></i>,
+		name: "GitHub",
+		icon: <i class="devicon-github-plain colored"></i>,
 		category: "Tools",
 	},
+	// {
+	// 	name: "Bash",
+	// 	icon: <i class="devicon-bash-plain colored"></i>,
+	// 	category: "Tools",
+	// },
 	{
 		name: "Node Package Manager",
 		icon: <i class="devicon-npm-original-wordmark colored"></i>,
 		category: "Tools",
 	},
 	{
-		name: "Jest",
-		icon: <i class="devicon-jest-plain colored"></i>,
+		name: "Heroku",
+		icon: <i class="devicon-heroku-plain colored"></i>,
 		category: "Tools",
 	},
 	{
-		name: "VS Code",
-		icon: <i class="devicon-vscode-plain colored"></i>,
+		name: "Netlify",
+		icon: <img src="./Netlify.svg" width="45" height="45" alt="Netlify" />,
 		category: "Tools",
 	},
+	// {
+	// 	name: "Jest",
+	// 	icon: <i class="devicon-jest-plain colored"></i>,
+	// 	category: "Tools",
+	// },
+	// {
+	// 	name: "VS Code",
+	// 	icon: <i class="devicon-vscode-plain colored"></i>,
+	// 	category: "Tools",
+	// },
 	{
 		name: "CSS",
 		icon: <i class="devicon-css3-plain colored"></i>,

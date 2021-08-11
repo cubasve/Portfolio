@@ -17,14 +17,12 @@ export default function About() {
 			<h1 id="about">About</h1>
 			<div className="About">
 				<div className="account">
-					<IconButton>
-						<AccountBox color="primary" style={{ fontSize: 200 }} />
-					</IconButton>
+					<AccountBox color="primary" style={{ fontSize: 200 }} />
 				</div>
 
 				<div className="brand">
 					<div className="one statement">
-						<IconButton>
+						<IconButton disabled>
 							<WbIncandescent color="primary" style={{ fontSize: 40 }} />
 						</IconButton>
 						<span className="statement development">
@@ -35,7 +33,7 @@ export default function About() {
 					</div>
 
 					<div className="two statement">
-						<IconButton>
+						<IconButton disabled>
 							<Assignment color="primary" style={{ fontSize: 40 }} />
 						</IconButton>
 						<span className="statement development">
@@ -46,7 +44,7 @@ export default function About() {
 					</div>
 
 					<div className="three statement">
-						<IconButton>
+						<IconButton disabled>
 							<AccountTree color="primary" style={{ fontSize: 40 }} />
 						</IconButton>
 						<span className="statement">

@@ -1,5 +1,5 @@
-import React from "react";
-import projectData from "./projectData.js";
+import React, { useContext } from "react";
+import projectData from "../../data/projectData";
 import "./Proj.css";
 import Flippy, { FrontSide, BackSide } from "react-flippy";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
@@ -24,7 +24,6 @@ const useStyles = makeStyles({
 		width: 270, //width: 280 - need to change css grid
 		height: 440,
 		// margin: 0,
-
 	},
 	cardHeader: {},
 	avatar: {},
@@ -72,7 +71,7 @@ export default function Proj() {
 								flipOnClick={true}
 								flipDirection="horizontal"
 							>
-								<FrontSide>
+								<FrontSide id="flippy">
 									<Card className={classes.card} key={project.name}>
 										<CardHeader
 											avatar={<Icon color="primary">{project.logo}</Icon>}
@@ -94,7 +93,7 @@ export default function Proj() {
 										</CardContent>
 									</Card>
 								</FrontSide>
-								<BackSide>
+								<BackSide id="flippy">
 									<Card className={classes.card} key={project.id}>
 										<CardHeader
 											avatar={<Icon color="primary">{project.logo}</Icon>}

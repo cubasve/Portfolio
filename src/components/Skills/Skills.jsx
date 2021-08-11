@@ -1,5 +1,5 @@
 import React from "react";
-import skillData from "./skillData.js";
+import skillData from "../../data/skillData";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import {
 	Card,
@@ -64,7 +64,11 @@ export default function Skills() {
 								.filter((skill) => skill.category === "Front")
 								.map((skill) => {
 									return (
-										<LightTooltip title={skill.name} key={skill.name} TransitionComponent={Zoom}>
+										<LightTooltip
+											title={skill.name}
+											key={skill.name}
+											TransitionComponent={Zoom}
+										>
 											<IconButton
 												aria-label={skill.name}
 												className={classes.skill}
@@ -87,7 +91,11 @@ export default function Skills() {
 								.filter((skill) => skill.category === "Back")
 								.map((skill) => {
 									return (
-										<LightTooltip title={skill.name} key={skill.name} TransitionComponent={Zoom}>
+										<LightTooltip
+											title={skill.name}
+											key={skill.name}
+											TransitionComponent={Zoom}
+										>
 											<IconButton
 												aria-label={skill.name}
 												className={classes.skill}
@@ -110,7 +118,11 @@ export default function Skills() {
 								.filter((skill) => skill.category === "Tools")
 								.map((skill) => {
 									return (
-										<LightTooltip title={skill.name} key={skill.name} TransitionComponent={Zoom}>
+										<LightTooltip
+											title={skill.name}
+											key={skill.name}
+											TransitionComponent={Zoom}
+										>
 											<IconButton
 												aria-label={skill.name}
 												className={classes.skill}
@@ -123,7 +135,7 @@ export default function Skills() {
 						</Typography>
 					</CardContent>
 				</Card>
-				<Card className={classes.card}>
+				{/* <Card className={classes.card}>
 					<CardContent>
 						<Typography variant="h5" className={classes.category}>
 							STYLING
@@ -133,7 +145,11 @@ export default function Skills() {
 								.filter((skill) => skill.category === "Styling")
 								.map((skill) => {
 									return (
-										<LightTooltip title={skill.name} key={skill.name} TransitionComponent={Zoom}>
+										<LightTooltip
+											title={skill.name}
+											key={skill.name}
+											TransitionComponent={Zoom}
+										>
 											<IconButton
 												aria-label={skill.name}
 												className={classes.skill}
@@ -156,7 +172,11 @@ export default function Skills() {
 								.filter((skill) => skill.category === "Deploy")
 								.map((skill) => {
 									return (
-										<LightTooltip title={skill.name} key={skill.name} TransitionComponent={Zoom}>
+										<LightTooltip
+											title={skill.name}
+											key={skill.name}
+											TransitionComponent={Zoom}
+										>
 											<IconButton
 												aria-label={skill.name}
 												className={classes.skill}
@@ -168,7 +188,7 @@ export default function Skills() {
 								})}
 						</Typography>
 					</CardContent>
-				</Card>
+				</Card> */}
 			</div>
 		</>
 	);
