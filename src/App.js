@@ -13,9 +13,13 @@ export default function App() {
 	const { mode, setMode } = useContext(ModeContext);
 
 	useEffect(() => {
-		const localStorageMode = localStorage.getItem("darkMode");
-		if (localStorageMode !== null) {
-			setMode(localStorageMode);
+		try {
+			const storedMode = localStorage.getItem("darkMode");
+			if (storedMode) {
+				setMode(JSON.parse(storedMode));
+			}
+		} catch (err) {
+			console.error(err);
 		}
 	}, [setMode]);
 

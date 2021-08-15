@@ -110,7 +110,7 @@ const projectData = [
 			<img src="./Netlify.svg" width="25" height="25" alt="Netlify" />,
 		],
 		description:
-			"Shoppies allows users to search for movies from the OMDB API and nominate up to 5 of their favourite movies.",
+			"Shoppies allows users to search for movies from the OMDB API and nominate up to 5 of their favourite movies. Movie nominations can be saved to, removed from, and retrieved from local storage. ",
 		demoLink: "https://the-shopppies.netlify.app/",
 		codeLink: "https://github.com/cubasve/Shoppies",
 		youtubeLink: "",

@@ -138,11 +138,11 @@ const skillData = [
 		icon: <i class="devicon-materialui-plain colored"></i>,
 		category: "Styling",
 	},
-	{
-		name: "GitHub",
-		icon: <i class="devicon-github-plain colored"></i>,
-		category: "Deploy",
-	},
+	// {
+	// 	name: "GitHub",
+	// 	icon: <i class="devicon-github-plain colored"></i>,
+	// 	category: "Deploy",
+	// },
 	{
 		name: "Heroku",
 		icon: <i class="devicon-heroku-plain colored"></i>,
