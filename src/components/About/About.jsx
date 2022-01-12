@@ -26,9 +26,10 @@ export default function About() {
 							<WbIncandescent color="primary" style={{ fontSize: 40 }} />
 						</IconButton>
 						<span className="statement development">
-							I am a full-stack software developer who specializes in the MERN
-							stack. I am compiling what I have learnt in life into applications
-							and sharing that knowledge in a fun and interactive way.
+							{/* I am a full-stack software developer who specializes in the MERN
+							stack.*/}
+							I am compiling what I have learnt in life into applications and
+							sharing that knowledge in a fun and interactive way.
 						</span>
 					</div>
 

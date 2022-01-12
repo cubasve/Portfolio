@@ -127,11 +127,9 @@ export default function Intro() {
 						</span>
 					</h2>
 					<h3 className={"title-" + (mode ? "dark" : "light")}>
-						Full-Stack Web Developer
+						Web Developer
 					</h3>
-					<h4 className="with-purpose">
-						Building Transformative Applications With Purpose
-					</h4>
+					<h4 className="with-purpose">Building Applications With Purpose</h4>
 				</div>
 			</div>
 		</div>

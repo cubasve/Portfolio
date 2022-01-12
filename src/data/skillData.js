@@ -16,21 +16,21 @@ const skillData = [
 		icon: <i class="devicon-javascript-plain colored"></i>,
 		category: "Front",
 	},
-	// {
-	// 	name: "TypeScript",
-	// 	icon: <i class="devicon-typescript-plain colored"></i>,
-	// 	category: "Front",
-	// },
+	{
+		name: "TypeScript",
+		icon: <i class="devicon-typescript-plain colored"></i>,
+		category: "Front",
+	},
 	{
 		name: "React",
 		icon: <i class="devicon-react-original colored"></i>,
 		category: "Front",
 	},
-	{
-		name: "Bootstrap",
-		icon: <i class="devicon-bootstrap-plain colored"></i>,
-		category: "Front",
-	},
+	// {
+	// 	name: "Bootstrap",
+	// 	icon: <i class="devicon-bootstrap-plain colored"></i>,
+	// 	category: "Front",
+	// },
 	// {
 	// 	name: "Redux",
 	// 	icon: <i class="devicon-redux-original colored"></i>,
